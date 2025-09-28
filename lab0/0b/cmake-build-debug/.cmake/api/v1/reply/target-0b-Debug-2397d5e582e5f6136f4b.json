@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "0b.exe"
-		},
-		{
-			"path" : "0b.pdb"
+			"path" : "0b"
 		}
 	],
 	"backtrace" : 1,
@@ -64,20 +61,12 @@
 			{
 				"fragment" : "-g",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "",
-				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "0b",
-	"nameOnDisk" : "0b.exe",
+	"nameOnDisk" : "0b",
 	"paths" : 
 	{
 		"build" : ".",

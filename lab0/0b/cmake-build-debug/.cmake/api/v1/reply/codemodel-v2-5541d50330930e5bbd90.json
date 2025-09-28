@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.29"
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "0b::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-0b-Debug-67635bea7dab82ea1a24.json",
+					"jsonFile" : "target-0b-Debug-2397d5e582e5f6136f4b.json",
 					"name" : "0b",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Admin/Desktop/labs/OOP_labs/lab0/0b/cmake-build-debug",
-		"source" : "C:/Users/Admin/Desktop/labs/OOP_labs/lab0/0b"
+		"build" : "/home/denis/OOP_labs/lab0/0b/cmake-build-debug",
+		"source" : "/home/denis/OOP_labs/lab0/0b"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 7
+		"minor" : 8
 	}
 }

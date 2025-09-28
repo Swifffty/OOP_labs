@@ -1,15 +1,14 @@
 #include <iostream>
-#include <list>
 #include <filesystem>
 #include <string>
 #include <fstream>
 #include <cctype>
 #include <vector>
 #include <algorithm>
+#include <map>
 
 
 using std::string;
-using std::list;
 
 typedef struct {
     string word;
@@ -19,65 +18,85 @@ typedef struct {
 bool compare(const type_vector &element_a, const type_vector &element_b) {
     if (element_a.count > element_b.count) {
         return true;
-    } else {
+    }
+    return false;
+}
+
+class Dictionary {
+private:
+    std::map<string, unsigned int> words;
+    string word;
+public:
+    std::vector<type_vector> words_vec;
+    unsigned int count_words;
+
+    Dictionary() {
+        count_words = 0;
+        word = "";
+    }
+    void add_map() {
+        if (word.size() == 0) {
+            return;
+        }
+        if (words.find(word) == words.end()) {
+            words[word] = 1;
+        } else {
+            words[word] += 1;
+        }
+        word = "";
+        count_words++;
+    }
+
+    bool app_letter(char letter) {
+        if (std::isalpha(letter) || std::isdigit(letter)) {
+            word.push_back(tolower(letter));
+            return false;
+        }
+        return true;
+    }
+
+    bool word_empty() {
+        if (word.empty()) {
+            return true;
+        }
         return false;
     }
-}
 
-int find(std::vector<type_vector> words, string &word) {
-    for (int i = 0; i < words.size(); i++) {
-        if (words[i].word == word) {
-            return i;
+    void map_to_sort_vec() {
+        type_vector tmp;
+        for (const auto& [key, value] : words) {
+            tmp.word = key;
+            tmp.count = value;
+            words_vec.push_back(tmp);
+        }
+        std::sort(words_vec.begin(), words_vec.end(), compare);
+        words.clear();
+    }
+
+};
+
+void fill_map(Dictionary &dict_f, string &line) {
+    unsigned int size_line = size(line);
+
+    for (int i = 0; i < size_line - 1; i++) {
+        if (dict_f.app_letter(line[i])) {
+          dict_f.add_map();
         }
     }
-    return -1;
-}
-
-void add_vec(std::vector<type_vector> &words, string &word) {
-    if (size(word) == 0) {
+    if (line[size_line - 1] == '-') {
         return;
     }
 
-    int res_index = find(words, word);
-
-    if (res_index != -1) {
-        words[res_index].count += 1;
-    } else {
-        words.push_back({word, 1});
-    }
-    word = "";
-}
-
-void fill_vec(std::vector<type_vector> &words, std::list<string> &text, string line, string &word, int &count_words) {
-    text.push_back(line);
-    unsigned int size_line = size(line);
-
-    for (int i = 0; i < size_line; i++) {
-
-        if (std::isalpha(line[i])) {
-            word.push_back(tolower(line[i]));
-
-        } else if (std::isdigit(line[i])) {
-            word.push_back(line[i]);
-
-        } else {
-            if (i == size_line - 1 && line[i] == '-') {
-                return;
-            }
-            add_vec(words, word);
-            count_words++;
-        }
-    }
-    if (!word.empty()) {
-        add_vec(words, word);
-        count_words++;
+    dict_f.app_letter(line[size_line - 1]);
+    if (!dict_f.word_empty()) {
+        dict_f.add_map();
     }
 }
 
-void fill_csv(std::ofstream &csv, std::vector<type_vector> &words, int &count_words) {
+void fill_csv(std::ofstream &csv, Dictionary &dict_f) {
     csv << "Words;Count;Frequency\n";
-    for (const type_vector &element : words) {
-        csv << element.word << ';' << element.count << ';' << element.count * 100 / count_words << "%" << "\n";
+    for (const type_vector &element : dict_f.words_vec) {
+        csv << element.word << ';' << element.count << ';' << element.count * 100 / dict_f.count_words << "%" << "\n";
     }
 }
 
@@ -97,20 +116,16 @@ int main() {
         return 0;
     }
 
-    list<std::string> text;
-
-    std::vector<type_vector> words;
-    string word;
-    int count_words = 0;
+    Dictionary dict_f;
 
     while (!f.eof()) {
-        fill_vec(words, text, line, word, count_words);
+        fill_map(dict_f, line);
         std::getline(f, line);
     }
 
     f.close();
 
-    std::sort(words.begin(), words.end(), compare);
+    dict_f.map_to_sort_vec();
 
     std::ofstream csv("table_words.csv");
     if (!csv.is_open()) {
@@ -118,7 +133,7 @@ int main() {
         return 0;
     }
 
-    fill_csv(csv, words, count_words);
+    fill_csv(csv, dict_f);
     csv.close();
     return 0;
 }

@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/denis/OOP_labs/lab0/0b/Dictinory.cpp" "CMakeFiles/0b.dir/Dictinory.cpp.o" "gcc" "CMakeFiles/0b.dir/Dictinory.cpp.o.d"
+  "/home/denis/OOP_labs/lab0/0b/fill_map.cpp" "CMakeFiles/0b.dir/fill_map.cpp.o" "gcc" "CMakeFiles/0b.dir/fill_map.cpp.o.d"
   "/home/denis/OOP_labs/lab0/0b/main.cpp" "CMakeFiles/0b.dir/main.cpp.o" "gcc" "CMakeFiles/0b.dir/main.cpp.o.d"
   "" "0b" "gcc" "CMakeFiles/0b.dir/link.d"
   )

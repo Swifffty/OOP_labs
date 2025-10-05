@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /home/denis/OOP_labs/lab0/0b/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/home/denis/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/ctest $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -129,6 +139,73 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/0b.dir/build.make CMakeFiles/0b.dir/build
 .PHONY : 0b/fast
 
+#=============================================================================
+# Target rules for targets named run_tests
+
+# Build rule for target.
+run_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_tests
+.PHONY : run_tests
+
+# fast build rule for target.
+run_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
+.PHONY : run_tests/fast
+
+Dictinory.o: Dictinory.cpp.o
+.PHONY : Dictinory.o
+
+# target to build an object file
+Dictinory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/0b.dir/build.make CMakeFiles/0b.dir/Dictinory.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Dictinory.cpp.o
+.PHONY : Dictinory.cpp.o
+
+Dictinory.i: Dictinory.cpp.i
+.PHONY : Dictinory.i
+
+# target to preprocess a source file
+Dictinory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/0b.dir/build.make CMakeFiles/0b.dir/Dictinory.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Dictinory.cpp.i
+.PHONY : Dictinory.cpp.i
+
+Dictinory.s: Dictinory.cpp.s
+.PHONY : Dictinory.s
+
+# target to generate assembly for a file
+Dictinory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/0b.dir/build.make CMakeFiles/0b.dir/Dictinory.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Dictinory.cpp.s
+.PHONY : Dictinory.cpp.s
+
+fill_map.o: fill_map.cpp.o
+.PHONY : fill_map.o
+
+# target to build an object file
+fill_map.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/0b.dir/build.make CMakeFiles/0b.dir/fill_map.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/fill_map.cpp.o
+.PHONY : fill_map.cpp.o
+
+fill_map.i: fill_map.cpp.i
+.PHONY : fill_map.i
+
+# target to preprocess a source file
+fill_map.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/0b.dir/build.make CMakeFiles/0b.dir/fill_map.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/fill_map.cpp.i
+.PHONY : fill_map.cpp.i
+
+fill_map.s: fill_map.cpp.s
+.PHONY : fill_map.s
+
+# target to generate assembly for a file
+fill_map.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/0b.dir/build.make CMakeFiles/0b.dir/fill_map.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/fill_map.cpp.s
+.PHONY : fill_map.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -153,6 +230,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/0b.dir/build.make CMakeFiles/0b.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+test_lab0b.o: test_lab0b.cpp.o
+.PHONY : test_lab0b.o
+
+# target to build an object file
+test_lab0b.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/test_lab0b.cpp.o
+.PHONY : test_lab0b.cpp.o
+
+test_lab0b.i: test_lab0b.cpp.i
+.PHONY : test_lab0b.i
+
+# target to preprocess a source file
+test_lab0b.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/test_lab0b.cpp.i
+.PHONY : test_lab0b.cpp.i
+
+test_lab0b.s: test_lab0b.cpp.s
+.PHONY : test_lab0b.s
+
+# target to generate assembly for a file
+test_lab0b.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/test_lab0b.cpp.s
+.PHONY : test_lab0b.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,10 +262,21 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... 0b"
+	@echo "... run_tests"
+	@echo "... Dictinory.o"
+	@echo "... Dictinory.i"
+	@echo "... Dictinory.s"
+	@echo "... fill_map.o"
+	@echo "... fill_map.i"
+	@echo "... fill_map.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... test_lab0b.o"
+	@echo "... test_lab0b.i"
+	@echo "... test_lab0b.s"
 .PHONY : help
 
 

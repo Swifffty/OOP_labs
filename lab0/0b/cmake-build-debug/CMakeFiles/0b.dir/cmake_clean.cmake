@@ -2,6 +2,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/0b.dir/link.d"
   "0b"
   "0b.pdb"
+  "CMakeFiles/0b.dir/Dictinory.cpp.o"
+  "CMakeFiles/0b.dir/Dictinory.cpp.o.d"
+  "CMakeFiles/0b.dir/fill_map.cpp.o"
+  "CMakeFiles/0b.dir/fill_map.cpp.o.d"
   "CMakeFiles/0b.dir/main.cpp.o"
   "CMakeFiles/0b.dir/main.cpp.o.d"
 )

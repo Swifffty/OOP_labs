@@ -152,6 +152,30 @@ run_tests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
 .PHONY : run_tests/fast
 
+Csv_file.o: Csv_file.cpp.o
+.PHONY : Csv_file.o
+
+# target to build an object file
+Csv_file.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/0b.dir/build.make CMakeFiles/0b.dir/Csv_file.cpp.o
+.PHONY : Csv_file.cpp.o
+
+Csv_file.i: Csv_file.cpp.i
+.PHONY : Csv_file.i
+
+# target to preprocess a source file
+Csv_file.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/0b.dir/build.make CMakeFiles/0b.dir/Csv_file.cpp.i
+.PHONY : Csv_file.cpp.i
+
+Csv_file.s: Csv_file.cpp.s
+.PHONY : Csv_file.s
+
+# target to generate assembly for a file
+Csv_file.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/0b.dir/build.make CMakeFiles/0b.dir/Csv_file.cpp.s
+.PHONY : Csv_file.cpp.s
+
 Dictinory.o: Dictinory.cpp.o
 .PHONY : Dictinory.o
 
@@ -178,6 +202,33 @@ Dictinory.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/0b.dir/build.make CMakeFiles/0b.dir/Dictinory.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Dictinory.cpp.s
 .PHONY : Dictinory.cpp.s
+
+Dictionary_vector.o: Dictionary_vector.cpp.o
+.PHONY : Dictionary_vector.o
+
+# target to build an object file
+Dictionary_vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/0b.dir/build.make CMakeFiles/0b.dir/Dictionary_vector.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Dictionary_vector.cpp.o
+.PHONY : Dictionary_vector.cpp.o
+
+Dictionary_vector.i: Dictionary_vector.cpp.i
+.PHONY : Dictionary_vector.i
+
+# target to preprocess a source file
+Dictionary_vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/0b.dir/build.make CMakeFiles/0b.dir/Dictionary_vector.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Dictionary_vector.cpp.i
+.PHONY : Dictionary_vector.cpp.i
+
+Dictionary_vector.s: Dictionary_vector.cpp.s
+.PHONY : Dictionary_vector.s
+
+# target to generate assembly for a file
+Dictionary_vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/0b.dir/build.make CMakeFiles/0b.dir/Dictionary_vector.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Dictionary_vector.cpp.s
+.PHONY : Dictionary_vector.cpp.s
 
 fill_map.o: fill_map.cpp.o
 .PHONY : fill_map.o
@@ -265,9 +316,15 @@ help:
 	@echo "... test"
 	@echo "... 0b"
 	@echo "... run_tests"
+	@echo "... Csv_file.o"
+	@echo "... Csv_file.i"
+	@echo "... Csv_file.s"
 	@echo "... Dictinory.o"
 	@echo "... Dictinory.i"
 	@echo "... Dictinory.s"
+	@echo "... Dictionary_vector.o"
+	@echo "... Dictionary_vector.i"
+	@echo "... Dictionary_vector.s"
 	@echo "... fill_map.o"
 	@echo "... fill_map.i"
 	@echo "... fill_map.s"

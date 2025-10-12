@@ -13,13 +13,19 @@ add_executable(0b main.cpp
         Dictinory.h
         fill_map.cpp
         fill_map.h
+        Dictionary_vector.cpp
+        Dictionary_vector.h
+        Csv_file.cpp
+        Csv_file.h
 )
 
 enable_testing()
 
 find_package(GTest REQUIRED)
 
-add_executable(run_tests test_lab0b.cpp Dictinory.cpp fill_map.cpp)
+add_executable(run_tests test_lab0b.cpp Dictinory.cpp fill_map.cpp
+        Dictionary_vector.cpp
+        Dictionary_vector.h)
 
 target_link_libraries(run_tests GTest::gtest GTest::gtest_main)
 

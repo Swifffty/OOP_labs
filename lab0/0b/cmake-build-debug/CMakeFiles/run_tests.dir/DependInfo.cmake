@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/denis/OOP_labs/lab0/0b/Dictinory.cpp" "CMakeFiles/run_tests.dir/Dictinory.cpp.o" "gcc" "CMakeFiles/run_tests.dir/Dictinory.cpp.o.d"
+  "/home/denis/OOP_labs/lab0/0b/Dictionary_vector.cpp" "CMakeFiles/run_tests.dir/Dictionary_vector.cpp.o" "gcc" "CMakeFiles/run_tests.dir/Dictionary_vector.cpp.o.d"
   "/home/denis/OOP_labs/lab0/0b/fill_map.cpp" "CMakeFiles/run_tests.dir/fill_map.cpp.o" "gcc" "CMakeFiles/run_tests.dir/fill_map.cpp.o.d"
   "/home/denis/OOP_labs/lab0/0b/test_lab0b.cpp" "CMakeFiles/run_tests.dir/test_lab0b.cpp.o" "gcc" "CMakeFiles/run_tests.dir/test_lab0b.cpp.o.d"
   "" "run_tests" "gcc" "CMakeFiles/run_tests.dir/link.d"

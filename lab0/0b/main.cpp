@@ -1,9 +1,9 @@
 #include <iostream>
-#include <filesystem>
-#include <string>
 #include <fstream>
 #include "fill_map.h"
 #include "Dictinory.h"
+#include "Dictionary_vector.h"
+#include "Csv_file.h"
 
 int main() {
     string line;
@@ -30,16 +30,12 @@ int main() {
 
     f.close();
 
-    dict_f.map_to_sort_vec();
+    Dictionary_vector dict_in_vector(dict_f.Get_map(), dict_f.Get_counts());
 
-    std::ofstream csv("table_words.csv");
-    if (!csv.is_open()) {
-        std::cout << "no such csv file";
-        return 0;
-    }
+    Csv_file file_for_write;
 
-    dict_f.fill_csv(csv);
-
-    csv.close();
+    file_for_write.fill_csv(dict_in_vector.Get_vector(), dict_in_vector.Get_count());
     return 0;
 }
+
+

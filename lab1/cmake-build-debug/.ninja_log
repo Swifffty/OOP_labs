@@ -1,0 +1,11 @@
+# ninja log v6
+7626	10405	7846729839613959	lib/libgtest.a	57971d2703b232e8
+17	831	7850117539412566	CMakeFiles/test_bitarray.dir/src/BitArray.cpp.obj	22386f97c684e402
+7	505	7850100224531388	CMakeFiles/lab1.dir/src/main.cpp.obj	44d1f1ec1041fd4
+7	7624	7846729763300807	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	647febb461d2bcae
+11	1619	7850127203931245	CMakeFiles/test_bitarray.dir/test/tests.cpp.obj	95643afecabb3ed4
+722	816	7850114056072610	lab1.exe	d28d163cb466640
+10	721	7850114048962248	CMakeFiles/lab1.dir/src/BitArray.cpp.obj	56bf4efe4d741811
+13	1946	7846729763485257	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	e3d50904d0dc4f52
+10406	10470	7846729867411883	lib/libgtest_main.a	8cd29fe7818e2047
+1619	4648	7850127220012066	test_bitarray.exe	cb69e94385bdc86a

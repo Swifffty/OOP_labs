@@ -1,0 +1,21 @@
+# ninja log v6
+2	41	7846710972024904	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	c117d1b8b6a37f60
+2	41	7846710972024904	C:/Users/Admin/Desktop/labs/OOP_labs/OOP_labs/lab1/test/cmake-build-debug-coverage/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	c117d1b8b6a37f60
+41	18016	7846711151771932	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	a922848785490c31
+41	18016	7846711151771932	C:/Users/Admin/Desktop/labs/OOP_labs/OOP_labs/lab1/test/cmake-build-debug-coverage/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	a922848785490c31
+18016	18106	7846711151822388	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	98f636c39d1f5af8
+18016	18106	7846711151822388	C:/Users/Admin/Desktop/labs/OOP_labs/OOP_labs/lab1/test/cmake-build-debug-coverage/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	98f636c39d1f5af8
+18107	18157	7846711153186926	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	ef88da9b50d19f79
+18107	18157	7846711153186926	C:/Users/Admin/Desktop/labs/OOP_labs/OOP_labs/lab1/test/cmake-build-debug-coverage/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	ef88da9b50d19f79
+18157	18193	7846711153547124	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	6dd03817ed655ed1
+18157	18193	7846711153547124	C:/Users/Admin/Desktop/labs/OOP_labs/OOP_labs/lab1/test/cmake-build-debug-coverage/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	6dd03817ed655ed1
+18193	18228	7846711153899992	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	8eda307eeb0c5eba
+18193	18228	7846711153899992	C:/Users/Admin/Desktop/labs/OOP_labs/OOP_labs/lab1/test/cmake-build-debug-coverage/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	8eda307eeb0c5eba
+18228	18267	7846711154290995	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	c063f33a2aea1167
+18228	18267	7846711154290995	C:/Users/Admin/Desktop/labs/OOP_labs/OOP_labs/lab1/test/cmake-build-debug-coverage/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	c063f33a2aea1167
+18267	18302	7846711154649497	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	81b42bc459529537
+18267	18302	7846711154649497	C:/Users/Admin/Desktop/labs/OOP_labs/OOP_labs/lab1/test/cmake-build-debug-coverage/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	81b42bc459529537
+18303	18354	7846711155166913	CMakeFiles/googletest-populate-complete	d6b1ff566f20bf51
+18303	18354	7846711155166913	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	d6b1ff566f20bf51
+18303	18354	7846711155166913	C:/Users/Admin/Desktop/labs/OOP_labs/OOP_labs/lab1/test/cmake-build-debug-coverage/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	d6b1ff566f20bf51
+18303	18354	7846711155166913	C:/Users/Admin/Desktop/labs/OOP_labs/OOP_labs/lab1/test/cmake-build-debug-coverage/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	d6b1ff566f20bf51

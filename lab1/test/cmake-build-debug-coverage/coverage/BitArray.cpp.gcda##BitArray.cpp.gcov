@@ -1,0 +1,907 @@
+        -:    0:Source:C:/Users/Admin/Desktop/labs/OOP_labs/OOP_labs/lab1/src/BitArray.cpp
+        -:    0:Graph:C:\Users\Admin\Desktop\labs\OOP_labs\OOP_labs\lab1\test\cmake-build-debug-coverage\CMakeFiles\test_bitarray.dir\C_\Users\Admin\Desktop\labs\OOP_labs\OOP_labs\lab1\src\BitArray.cpp.gcno
+        -:    0:Data:C:\Users\Admin\Desktop\labs\OOP_labs\OOP_labs\lab1\test\cmake-build-debug-coverage\CMakeFiles\test_bitarray.dir\C_\Users\Admin\Desktop\labs\OOP_labs\OOP_labs\lab1\src\BitArray.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "BitArray.h"
+        -:    2:
+function _ZN8bitarray8BitArrayC2Ev called 2 returned 100% blocks executed 100%
+        2:    3:BitArray::BitArray() {
+        2:    3-block  0
+call    0 returned 2
+call    1 returned 2
+        2:    4:    size_array = -1;
+        2:    5:}
+        -:    6:
+function _ZN8bitarray8BitArrayD2Ev called 21 returned 100% blocks executed 100%
+       21:    7:BitArray::~BitArray() {
+       21:    8:    array_of_bits.clear();
+       21:    8-block  0
+call    0 returned 21
+       21:    9:    size_array = -1;
+       21:   10:}
+call    0 returned 21
+        -:   11:
+function _Z18reverse_first_bitsRmRKjRKi called 9 returned 100% blocks executed 100%
+        9:   12:unsigned long reverse_first_bits(unsigned long &value, unsigned int const &bits_of_long, int const &num_bits) {
+        9:   13:    unsigned long mask_for_new_value = 1 << (bits_of_long - 1);
+        9:   14:    unsigned long mask_for_old_value = 1;
+        9:   15:    unsigned long new_value = 0;
+        -:   16:
+      297:   17:    while (mask_for_new_value != 0) {
+        9:   17-block  0
+      297:   17-block  1
+branch  0 taken 288
+branch  1 taken 9 (fallthrough)
+      288:   18:        if (value & mask_for_old_value) {
+      288:   18-block  0
+branch  0 taken 17 (fallthrough)
+branch  1 taken 271
+       17:   19:            new_value |= mask_for_new_value;
+       17:   19-block  0
+        -:   20:        }
+      288:   21:        mask_for_new_value >>= 1;
+      288:   22:        mask_for_old_value <<= 1;
+      288:   22-block  0
+        -:   23:    }
+        9:   24:    if (num_bits < bits_of_long) {
+        9:   24-block  0
+branch  0 taken 9 (fallthrough)
+branch  1 taken 0
+        9:   25:        new_value >>= (bits_of_long - num_bits);
+        9:   25-block  0
+        -:   26:    }
+        9:   27:    return new_value;
+        9:   27-block  0
+        -:   28:}
+        -:   29:
+function _ZN8bitarray8BitArrayC2Eim called 12 returned 100% blocks executed 64%
+       12:   30:BitArray::BitArray(int num_bits, unsigned long value) {
+       12:   30-block  0
+call    0 returned 12
+call    1 returned 12
+       12:   31:    if (value) {
+branch  0 taken 9 (fallthrough)
+branch  1 taken 3
+        9:   32:        value = reverse_first_bits(value, bits_of_long, num_bits);
+        9:   32-block  0
+call    0 returned 9
+        -:   33:    }
+       12:   34:    array_of_bits.push_back(value);
+       12:   34-block  0
+call    0 returned 12
+branch  1 taken 12 (fallthrough)
+branch  2 taken 0 (throw)
+       12:   35:    size_array = --num_bits;
+        -:   36:
+       12:   37:    int count_iterations = num_bits / bits_of_long;
+       12:   38:    if (count_iterations > 0) {
+       12:   38-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 12
+    #####:   39:        for (int i = 1; i <= count_iterations; i++) {
+    %%%%%:   39-block  0
+    %%%%%:   39-block  1
+    %%%%%:   39-block  2
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:   40:             array_of_bits.push_back(value);
+    %%%%%:   40-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   41:        }
+        -:   42:    }
+       12:   43:}
+       12:   43-block  0
+    $$$$$:   43-block  1
+call    0 never executed
+        -:   44:
+function _ZNK8bitarray8BitArrayixEi called 120 returned 99% blocks executed 75%
+      120:   45:bool BitArray:: operator[](int i) const{
+        -:   46:
+      120:   47:    if (i < 0 || i > size_array) {
+      120:   47-block  0
+branch  0 taken 120 (fallthrough)
+branch  1 taken 0
+      120:   47-block  1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 119
+        3:   48:        throw std::string{"bad index"};
+        1:   48-block  0
+call    0 returned 1
+        1:   48-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 0
+    $$$$$:   48-block  2
+    $$$$$:   48-block  3
+call    5 never executed
+        -:   49:    }
+        -:   50:
+      119:   51:    unsigned int index_of_vector = i / bits_of_long;
+      119:   52:    unsigned int index_in_word = i % bits_of_long;
+        -:   53:
+      119:   54:    unsigned long mask_for_bit = 1 << index_in_word;
+        -:   55:
+      119:   56:    return (((array_of_bits[index_of_vector] & mask_for_bit) == 0) ? 0 : 1);
+      119:   56-block  0
+call    0 returned 119
+      119:   56-block  1
+        -:   57:}
+        -:   58:
+function _ZN8bitarray8BitArrayaSERKS0_ called 8 returned 100% blocks executed 100%
+        8:   59:BitArray &BitArray::operator=(const BitArray &b) {
+        8:   60:    if (this != &b) {
+        8:   60-block  0
+branch  0 taken 8 (fallthrough)
+branch  1 taken 0
+        8:   61:        array_of_bits = b.array_of_bits;
+        8:   61-block  0
+call    0 returned 8
+        8:   62:        size_array = b.size_array;
+        -:   63:    }
+        8:   64:    return *this;
+        8:   64-block  0
+        -:   65:}
+        -:   66:
+function _ZN8bitarray8BitArrayC2ERKS0_ called 7 returned 100% blocks executed 83%
+        7:   67:BitArray::BitArray(const BitArray &b) {
+        7:   67-block  0
+call    0 returned 7
+call    1 returned 7
+        7:   68:    operator=(b);
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+        7:   69:}
+        7:   69-block  0
+    $$$$$:   69-block  1
+call    0 never executed
+        -:   70:
+function _ZN8bitarray8BitArray4swapERS0_ called 0 returned 0% blocks executed 0%
+    #####:   71:void BitArray::swap(BitArray &b) {
+    #####:   72:    std::vector<unsigned long> tmp_array = array_of_bits;
+    %%%%%:   72-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   73:    int tmp_size = size_array;
+    #####:   74:    operator=(b);
+    %%%%%:   74-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   75:    b.array_of_bits = tmp_array;
+    %%%%%:   75-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   76:    b.size_array = tmp_size;
+    #####:   77:}
+    %%%%%:   77-block  0
+call    0 never executed
+    $$$$$:   77-block  1
+call    1 never executed
+        -:   78:
+function _ZN8bitarray8BitArray6resizeEib called 2 returned 100% blocks executed 38%
+        2:   79:void BitArray::resize(int num_bits, bool value) {
+        2:   80:    if (num_bits < 0) {
+        2:   80-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+    #####:   81:        throw std::string{"bad num bits in resize"};
+    %%%%%:   81-block  0
+call    0 never executed
+    %%%%%:   81-block  1
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+call    4 never executed
+    $$$$$:   81-block  2
+    $$$$$:   81-block  3
+call    5 never executed
+        -:   82:    }
+        2:   83:    num_bits--;
+        2:   84:    if (num_bits == size_array) {
+        2:   84-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+    #####:   85:        return;
+    %%%%%:   85-block  0
+        -:   86:    }
+        2:   87:    int index_of_vector = num_bits / bits_of_long;
+        2:   88:    int index_of_vector_bits = num_bits / bits_of_long;
+        -:   89:
+        2:   90:    if (size_array < num_bits) {
+        2:   90-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        -:   91:
+        1:   92:        int bit_in_word_bits = size_array % bits_of_long;
+        1:   93:        unsigned long mask_for_bits = max_long;
+        -:   94:
+        1:   95:        if (value) {
+        1:   95-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:   96:            mask_for_bits <<= bit_in_word_bits + 1;
+    #####:   97:            array_of_bits[index_of_vector_bits] |= mask_for_bits;
+    %%%%%:   97-block  0
+call    0 never executed
+    #####:   98:            for (int i = index_of_vector_bits + 1; i <=  index_of_vector; i++) {
+    %%%%%:   98-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   99:                array_of_bits[i] = max_long;
+    %%%%%:   99-block  0
+call    0 never executed
+        -:  100:            }
+        -:  101:
+        -:  102:        } else {
+        1:  103:            mask_for_bits >>= (bits_of_long - bit_in_word_bits - 1);
+        1:  104:            array_of_bits[index_of_vector_bits] &= mask_for_bits;
+        1:  104-block  0
+call    0 returned 1
+       1*:  105:            for (int i = index_of_vector_bits + 1; i <= index_of_vector; i++) {
+        1:  105-block  0
+branch  0 taken 0
+branch  1 taken 1
+    #####:  106:                array_of_bits[i] = 0;
+    %%%%%:  106-block  0
+call    0 never executed
+        -:  107:            }
+        -:  108:        }
+        -:  109:    } else {
+        1:  110:        while (index_of_vector_bits != index_of_vector) {
+        1:  110-block  0
+        1:  110-block  1
+branch  0 taken 0
+branch  1 taken 1 (fallthrough)
+    #####:  111:            array_of_bits.pop_back();
+    %%%%%:  111-block  0
+call    0 never executed
+    #####:  112:            index_of_vector_bits--;
+        -:  113:        }
+        -:  114:    }
+        2:  115:    size_array = num_bits;
+        2:  115-block  0
+        -:  116:}
+        -:  117:
+function _ZN8bitarray8BitArray5clearEv called 0 returned 0% blocks executed 0%
+    #####:  118:void BitArray::clear() {
+    #####:  119:    array_of_bits.clear();
+    %%%%%:  119-block  0
+call    0 never executed
+    #####:  120:    size_array = -1;
+    #####:  121:}
+        -:  122:
+function _ZN8bitarray8BitArray9push_backEb called 2 returned 100% blocks executed 100%
+        2:  123:void BitArray::push_back(bool bit) {
+        2:  124:    int new_position = ++size_array;
+        2:  125:    int index_of_vector = new_position / bits_of_long;
+        2:  126:    int position_in_word = new_position % bits_of_long;
+        -:  127:
+        2:  128:    if (bit) {
+        2:  128-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:  129:        unsigned long mask = 1 << position_in_word;
+        1:  130:        array_of_bits[index_of_vector] |= mask;
+        1:  130-block  0
+call    0 returned 1
+        -:  131:    } else {
+        1:  132:        unsigned long mask = max_long >> (bits_of_long - position_in_word);
+        1:  133:        array_of_bits[index_of_vector] &= mask;
+        1:  133-block  0
+call    0 returned 1
+        -:  134:    }
+        2:  135:}
+        -:  136:
+function _ZN8bitarray8BitArrayaNERKS0_ called 1 returned 100% blocks executed 100%
+        1:  137:BitArray& BitArray::operator&=(const BitArray &b) {
+        1:  138:    int size_vector = size_array / bits_of_long;
+        2:  139:    for (int i = 0; i <= size_vector; i++) {
+        1:  139-block  0
+        2:  139-block  1
+branch  0 taken 1
+branch  1 taken 1 (fallthrough)
+        1:  140:        array_of_bits[i] &= b.array_of_bits[i];
+        1:  140-block  0
+call    0 returned 1
+call    1 returned 1
+        -:  141:    }
+        1:  142:    return *this;
+        1:  142-block  0
+        -:  143:}
+        -:  144:
+function _ZN8bitarray8BitArrayoRERKS0_ called 1 returned 100% blocks executed 100%
+        1:  145:BitArray& BitArray::operator|=(const BitArray &b) {
+        1:  146:    int size_vector = size_array / bits_of_long;
+        2:  147:    for (int i = 0; i <= size_vector; i++) {
+        1:  147-block  0
+        2:  147-block  1
+branch  0 taken 1
+branch  1 taken 1 (fallthrough)
+        1:  148:        array_of_bits[i] |= b.array_of_bits[i];
+        1:  148-block  0
+call    0 returned 1
+call    1 returned 1
+        -:  149:    }
+        1:  150:    return *this;
+        1:  150-block  0
+        -:  151:}
+        -:  152:
+function _ZN8bitarray8BitArrayeOERKS0_ called 1 returned 100% blocks executed 100%
+        1:  153:BitArray& BitArray::operator^=(const BitArray &b) {
+        1:  154:    int size_vector = size_array / bits_of_long;
+        2:  155:    for (int i = 0; i <= size_vector; i++) {
+        1:  155-block  0
+        2:  155-block  1
+branch  0 taken 1
+branch  1 taken 1 (fallthrough)
+        1:  156:        array_of_bits[i] ^= b.array_of_bits[i];
+        1:  156-block  0
+call    0 returned 1
+call    1 returned 1
+        -:  157:    }
+        1:  158:    return *this;
+        1:  158-block  0
+        -:  159:}
+        -:  160:
+        -:  161:
+function _ZN8bitarray8BitArraylSEi called 2 returned 100% blocks executed 46%
+        2:  162:BitArray& BitArray::operator<<=(int n) {
+        2:  163:    if (n == 0 || size_array == -1) {
+        2:  163-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:  163-block  1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2
+    #####:  164:        return *this;
+    %%%%%:  164-block  0
+        -:  165:    }
+        2:  166:    else if (n > size_array + 1) {
+        2:  166-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+    #####:  167:        for (int i = 0; i <= ((n - 1) / bits_of_long); i++) {
+    %%%%%:  167-block  0
+    %%%%%:  167-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:  168:            array_of_bits[i] = 0;
+    %%%%%:  168-block  0
+call    0 never executed
+        -:  169:        }
+        -:  170:    } else {
+        2:  171:        int delete_full_elements_vector = n / bits_of_long;
+       2*:  172:        for (int i = delete_full_elements_vector; i < (size_array / bits_of_long); i++) {
+        2:  172-block  0
+        2:  172-block  1
+branch  0 taken 0
+branch  1 taken 2 (fallthrough)
+    #####:  173:            array_of_bits[i - delete_full_elements_vector] = array_of_bits[i];
+    %%%%%:  173-block  0
+call    0 never executed
+call    1 never executed
+        -:  174:        }
+        2:  175:        n %= bits_of_long;
+        -:  176:
+        2:  177:        if (n == 0) {
+        2:  177-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+    #####:  178:            return *this;
+    %%%%%:  178-block  0
+        -:  179:        } else {
+       2*:  180:            for (int i = 0; i < (size_array / bits_of_long) - delete_full_elements_vector; i++) {
+        2:  180-block  0
+        2:  180-block  1
+branch  0 taken 0
+branch  1 taken 2 (fallthrough)
+    #####:  181:                array_of_bits[i] >>= n;
+    %%%%%:  181-block  0
+call    0 never executed
+    #####:  182:                unsigned long mask = ((max_long >> (max_long - n)) & array_of_bits[i + 1]) << (max_long - n);
+call    0 never executed
+    #####:  183:                array_of_bits[i] |= mask;
+call    0 never executed
+        -:  184:            }
+        2:  185:            array_of_bits[size_array / bits_of_long - delete_full_elements_vector] >>= n;
+        2:  185-block  0
+call    0 returned 2
+        -:  186:
+       2*:  187:            for (int i = (size_array / bits_of_long) - delete_full_elements_vector + 1; i <= size_array / bits_of_long; i++) {
+        2:  187-block  0
+branch  0 taken 0
+branch  1 taken 2 (fallthrough)
+    #####:  188:                array_of_bits[i] = 0;
+    %%%%%:  188-block  0
+call    0 never executed
+        -:  189:            }
+        -:  190:        }
+        -:  191:     }
+        2:  192:    return *this;
+        2:  192-block  0
+        -:  193:}
+        -:  194:
+function _ZN8bitarray8BitArrayrSEi called 1 returned 100% blocks executed 57%
+        1:  195:BitArray& BitArray::operator>>=(int n) {
+        1:  196:    if (n == 0 || size_array == -1) {
+        1:  196-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  196-block  1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    #####:  197:        return *this;
+    %%%%%:  197-block  0
+        -:  198:    }
+        1:  199:    else if (n > size_array + 1) {
+        1:  199-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:  200:        for (int i = 0; i <= ((n - 1) / bits_of_long); i++) {
+    %%%%%:  200-block  0
+    %%%%%:  200-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:  201:            array_of_bits[i] = 0;
+    %%%%%:  201-block  0
+call    0 never executed
+        -:  202:        }
+        -:  203:    } else {
+        1:  204:        int delete_full_elements_vector = n / bits_of_long;
+        2:  205:        for (int i = (size_array / bits_of_long); i >= delete_full_elements_vector; i--) {
+        1:  205-block  0
+        2:  205-block  1
+branch  0 taken 1
+branch  1 taken 1 (fallthrough)
+        1:  206:            array_of_bits[i] = array_of_bits[i - delete_full_elements_vector];
+        1:  206-block  0
+call    0 returned 1
+call    1 returned 1
+        -:  207:        }
+        1:  208:        n %= bits_of_long;
+        -:  209:
+        1:  210:        if (n == 0) {
+        1:  210-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:  211:            return *this;
+    %%%%%:  211-block  0
+        -:  212:        } else {
+       1*:  213:            for (int i = size_array / bits_of_long; i > delete_full_elements_vector; i--) {
+        1:  213-block  0
+        1:  213-block  1
+branch  0 taken 0
+branch  1 taken 1 (fallthrough)
+    #####:  214:                array_of_bits[i] <<= n;
+    %%%%%:  214-block  0
+call    0 never executed
+    #####:  215:                unsigned long mask = (max_long << (bits_of_long - n)) & array_of_bits[i - 1];
+call    0 never executed
+    #####:  216:                array_of_bits[i] |= (mask >> (bits_of_long - n));
+call    0 never executed
+        -:  217:            }
+        1:  218:            array_of_bits[delete_full_elements_vector] <<= n;
+        1:  218-block  0
+call    0 returned 1
+        -:  219:
+       1*:  220:            for (int i = delete_full_elements_vector - 1; i >= 0 ; i--) {
+        1:  220-block  0
+branch  0 taken 0
+branch  1 taken 1 (fallthrough)
+    #####:  221:                array_of_bits[i] = 0;
+    %%%%%:  221-block  0
+call    0 never executed
+        -:  222:            }
+        -:  223:        }
+        -:  224:    }
+        1:  225:    return *this;
+        1:  225-block  0
+        -:  226:}
+        -:  227:
+function _ZNK8bitarray8BitArraylsEi called 0 returned 0% blocks executed 0%
+    #####:  228:BitArray BitArray::operator<<(int n) const {
+    #####:  229:    BitArray b(*this);
+    %%%%%:  229-block  0
+call    0 never executed
+        -:  230:
+    #####:  231:    b.operator<<=(n);
+call    0 never executed
+    #####:  232:    return b;
+        -:  233:}
+        -:  234:
+function _ZNK8bitarray8BitArrayrsEi called 1 returned 100% blocks executed 100%
+        1:  235:BitArray BitArray::operator>>(int n) const {
+        1:  236:    BitArray b(*this);
+        1:  236-block  0
+call    0 returned 1
+        -:  237:
+        1:  238:    b.operator>>=(n);
+call    0 returned 1
+        1:  239:    return b;
+        -:  240:}
+        -:  241:
+function _ZN8bitarray8BitArray3setEib called 7 returned 86% blocks executed 69%
+        7:  242:BitArray& BitArray::set(int n, bool val) {
+        -:  243:
+        7:  244:    if (n < 0 || n > size_array) {
+        7:  244-block  0
+branch  0 taken 6 (fallthrough)
+branch  1 taken 1
+        6:  244-block  1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 6
+        3:  245:        throw std::string{"bad index in set"};
+        1:  245-block  0
+call    0 returned 1
+        1:  245-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+call    4 returned 0
+    $$$$$:  245-block  2
+    $$$$$:  245-block  3
+call    5 never executed
+        -:  246:    }
+        -:  247:
+        6:  248:    if (operator[](n) == val) {
+        6:  248-block  0
+call    0 returned 6
+branch  1 taken 0 (fallthrough)
+branch  2 taken 6
+    #####:  249:        return *this;
+    %%%%%:  249-block  0
+        -:  250:    }
+        -:  251:
+        6:  252:    int vector_index = n / bits_of_long;
+        6:  253:    int word_index = n % bits_of_long;
+        -:  254:
+        -:  255:
+        6:  256:    if (val) {
+        6:  256-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 3
+        3:  257:        unsigned long mask = 1;
+        3:  258:        if (word_index == 0) {
+        3:  258-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 3
+    #####:  259:            array_of_bits[vector_index] |= mask;
+    %%%%%:  259-block  0
+call    0 never executed
+    #####:  260:            return *this;
+        -:  261:        }
+        -:  262:
+        3:  263:        if (word_index == (bits_of_long - 1)) {
+        3:  263-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 3
+    #####:  264:            mask <<= (bits_of_long - 1);
+    #####:  265:            array_of_bits[vector_index] |= mask;
+    %%%%%:  265-block  0
+call    0 never executed
+    #####:  266:            return *this;
+        -:  267:        }
+        -:  268:
+        3:  269:        mask <<= word_index;
+        3:  270:        array_of_bits[vector_index] |= mask;
+        3:  270-block  0
+call    0 returned 3
+        -:  271:    } else {
+        3:  272:        unsigned long mask = max_long;
+        -:  273:
+        3:  274:        if (word_index == 0) {
+        3:  274-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:  275:            mask <<= 1;
+        2:  276:            array_of_bits[vector_index] &= mask;
+        2:  276-block  0
+call    0 returned 2
+        2:  277:            return *this;
+        -:  278:        }
+        -:  279:
+        1:  280:        if (word_index == bits_of_long - 1) {
+        1:  280-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    #####:  281:            mask >>= 1;
+    #####:  282:            array_of_bits[vector_index] &= mask;
+    %%%%%:  282-block  0
+call    0 never executed
+    #####:  283:            return *this;
+        -:  284:        }
+        -:  285:
+        1:  286:        unsigned long first_part_mask = max_long << (word_index + 1);
+        1:  287:        unsigned long second_part_mask = max_long >> (bits_of_long - word_index);
+        1:  288:        mask = first_part_mask | second_part_mask;
+        1:  289:        array_of_bits[vector_index] &= mask;
+        1:  289-block  0
+call    0 returned 1
+        -:  290:    }
+        4:  291:    return *this;
+        4:  291-block  0
+        -:  292:}
+        -:  293:
+function _ZN8bitarray8BitArray3setEv called 1 returned 100% blocks executed 100%
+        1:  294:BitArray& BitArray::set() {
+        2:  295:    for (int i = 0; i <= (size_array / bits_of_long); i++) {
+        1:  295-block  0
+        2:  295-block  1
+branch  0 taken 1
+branch  1 taken 1 (fallthrough)
+        1:  296:        array_of_bits[i] = max_long;
+        1:  296-block  0
+call    0 returned 1
+        -:  297:    }
+        1:  298:    return *this;
+        1:  298-block  0
+        -:  299:}
+        -:  300:
+function _ZN8bitarray8BitArray5resetEi called 1 returned 100% blocks executed 100%
+        1:  301:BitArray& BitArray::reset(int n) {
+        1:  302:    return set(n, false);
+        1:  302-block  0
+call    0 returned 1
+        -:  303:}
+        -:  304:
+function _ZN8bitarray8BitArray5resetEv called 1 returned 100% blocks executed 100%
+        1:  305:BitArray& BitArray::reset() {
+        2:  306:    for (int i = 0; i <= (size_array / bits_of_long); i++) {
+        1:  306-block  0
+        2:  306-block  1
+branch  0 taken 1
+branch  1 taken 1 (fallthrough)
+        1:  307:        array_of_bits[i] = 0;
+        1:  307-block  0
+call    0 returned 1
+        -:  308:    }
+        1:  309:    return *this;
+        1:  309-block  0
+        -:  310:}
+        -:  311:
+function _ZNK8bitarray8BitArray3anyEv called 3 returned 100% blocks executed 100%
+        3:  312:bool BitArray::any() const{
+        4:  313:    for (int i = 0; i <= (size_array / bits_of_long); i++) {
+        3:  313-block  0
+        1:  313-block  1
+        4:  313-block  2
+branch  0 taken 3
+branch  1 taken 1 (fallthrough)
+        3:  314:        if (array_of_bits[i] != 0) {
+        3:  314-block  0
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1
+        2:  315:            return true;
+        2:  315-block  0
+        -:  316:        }
+        -:  317:    }
+        1:  318:    return false;
+        1:  318-block  0
+        -:  319:}
+        -:  320:
+function _ZNK8bitarray8BitArray4noneEv called 3 returned 100% blocks executed 100%
+        3:  321:bool BitArray::none() const{
+        5:  322:    for (int i = 0; i <= (size_array / bits_of_long); i++) {
+        3:  322-block  0
+        2:  322-block  1
+        5:  322-block  2
+branch  0 taken 3
+branch  1 taken 2 (fallthrough)
+        3:  323:        if (array_of_bits[i] != 0) {
+        3:  323-block  0
+call    0 returned 3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 2
+        1:  324:            return false;
+        1:  324-block  0
+        -:  325:        }
+        -:  326:    }
+        2:  327:    return true;
+        2:  327-block  0
+        -:  328:}
+        -:  329:
+function _ZNK8bitarray8BitArraycoEv called 1 returned 100% blocks executed 90%
+        1:  330:BitArray BitArray::operator~() const {
+        1:  331:    BitArray b(*this);
+        1:  331-block  0
+call    0 returned 1
+        -:  332:
+        5:  333:    for (int i = 0; i <= size_array; i++) {
+        4:  333-block  0
+        5:  333-block  1
+branch  0 taken 4
+branch  1 taken 1 (fallthrough)
+        4:  334:        bool value = !operator[](i);
+        4:  334-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:  335:        b.set(i, value);
+        4:  335-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  336:    }
+        1:  337:    return b;
+        1:  337-block  0
+        1:  337-block  1
+    =====:  338:}
+    $$$$$:  338-block  0
+call    0 never executed
+        -:  339:
+function _ZNK8bitarray8BitArray5countEv called 1 returned 100% blocks executed 100%
+        1:  340:int BitArray::count() const {
+        1:  341:    int cnt = 0;
+        5:  342:    for (int i = 0; i <= size_array; i++) {
+        1:  342-block  0
+        4:  342-block  1
+        5:  342-block  2
+branch  0 taken 4
+branch  1 taken 1 (fallthrough)
+        4:  343:        if (operator[](i)) {
+        4:  343-block  0
+call    0 returned 4
+branch  1 taken 2 (fallthrough)
+branch  2 taken 2
+        2:  344:            cnt++;
+        2:  344-block  0
+        -:  345:        }
+        -:  346:    }
+        1:  347:    return cnt;
+        1:  347-block  0
+        -:  348:}
+        -:  349:
+function _ZNK8bitarray8BitArray4sizeEv called 13 returned 100% blocks executed 100%
+       13:  350:int BitArray::size() const {
+       13:  351:    return (size_array + 1);
+       13:  351-block  0
+        -:  352:}
+        -:  353:
+function _ZNK8bitarray8BitArray5emptyEv called 1 returned 100% blocks executed 75%
+        1:  354:bool BitArray::empty() const {
+        1:  355:    if (size_array == -1) {
+        1:  355-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  356:        return true;
+        1:  356-block  0
+        -:  357:    } else {
+    #####:  358:        return false;
+    %%%%%:  358-block  0
+        -:  359:    }
+        -:  360:}
+        -:  361:
+function _ZNK8bitarray8BitArray9to_stringB5cxx11Ev called 16 returned 100% blocks executed 75%
+       16:  362:std::string BitArray::to_string() const {
+       16:  363:    std::string result_bit = std::to_string(operator[](0));
+       16:  363-block  0
+call    0 returned 16
+call    1 returned 16
+        -:  364:
+       89:  365:    for (int i = 1; i <= size_array; i++) {
+       89:  365-block  0
+branch  0 taken 73
+branch  1 taken 16 (fallthrough)
+       73:  366:        result_bit += std::to_string(operator[](i));
+       73:  366-block  0
+call    0 returned 73
+branch  1 taken 73 (fallthrough)
+branch  2 taken 0 (throw)
+       73:  366-block  1
+call    3 returned 73
+call    4 returned 73
+branch  5 taken 73 (fallthrough)
+branch  6 taken 0 (throw)
+       73:  366-block  2
+call    7 returned 73
+    $$$$$:  366-block  3
+call    8 never executed
+    $$$$$:  366-block  4
+        -:  367:    }
+       16:  368:    return result_bit;
+       16:  368-block  0
+       16:  368-block  1
+    =====:  369:}
+    $$$$$:  369-block  0
+call    0 never executed
+        -:  370:
+function _ZN8bitarrayeqERKNS_8BitArrayES2_ called 1 returned 100% blocks executed 86%
+        1:  371:bool bitarray::operator==(const BitArray& b1, const BitArray& b2) {
+        1:  372:    if (b1.size() != b2.size()) {
+        1:  372-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    #####:  373:        return false;
+    %%%%%:  373-block  0
+        -:  374:    }
+        3:  375:    for (int i = 0; i < b1.size(); i++) {
+        1:  375-block  0
+        2:  375-block  1
+        3:  375-block  2
+call    0 returned 3
+branch  1 taken 3
+branch  2 taken 0 (fallthrough)
+        3:  376:        if (b1.operator[](i) != b2.operator[](i)) {
+        3:  376-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 1 (fallthrough)
+branch  3 taken 2
+        1:  377:            return false;
+        1:  377-block  0
+        -:  378:        }
+        -:  379:    }
+    #####:  380:    return true;
+    %%%%%:  380-block  0
+        -:  381:}
+        -:  382:
+function _ZN8bitarrayneERKNS_8BitArrayES2_ called 1 returned 100% blocks executed 86%
+        1:  383:bool bitarray::operator!=(const BitArray& b1, const BitArray& b2) {
+        1:  384:    if (b1.size() != b2.size()) {
+        1:  384-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    #####:  385:        return true;
+    %%%%%:  385-block  0
+        -:  386:    }
+        3:  387:    for (int i = 0; i < b1.size(); i++) {
+        1:  387-block  0
+        2:  387-block  1
+        3:  387-block  2
+call    0 returned 3
+branch  1 taken 3
+branch  2 taken 0 (fallthrough)
+        3:  388:        if (b1.operator[](i) != b2.operator[](i)) {
+        3:  388-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 1 (fallthrough)
+branch  3 taken 2
+        1:  389:            return true;
+        1:  389-block  0
+        -:  390:        }
+        -:  391:    }
+    #####:  392:    return false;
+    %%%%%:  392-block  0
+        -:  393:}
+        -:  394:
+function _ZN8bitarrayanERKNS_8BitArrayES2_ called 0 returned 0% blocks executed 0%
+    #####:  395:BitArray bitarray::operator&(const BitArray& b1, const BitArray& b2) {
+    #####:  396:    BitArray c(b1);
+    %%%%%:  396-block  0
+call    0 never executed
+    #####:  397:    c.operator&=(b2);
+call    0 never executed
+    #####:  398:    return c;
+        -:  399:}
+        -:  400:
+function _ZN8bitarrayorERKNS_8BitArrayES2_ called 1 returned 100% blocks executed 100%
+        1:  401:BitArray bitarray::operator|(const BitArray& b1, const BitArray& b2) {
+        1:  402:    BitArray c(b1);
+        1:  402-block  0
+call    0 returned 1
+        1:  403:    c.operator|=(b2);
+call    0 returned 1
+        1:  404:    return c;
+        -:  405:}
+        -:  406:
+function _ZN8bitarrayeoERKNS_8BitArrayES2_ called 1 returned 100% blocks executed 100%
+        1:  407:BitArray bitarray::operator^(const BitArray& b1, const BitArray& b2) {
+        1:  408:    BitArray c(b1);
+        1:  408-block  0
+call    0 returned 1
+        1:  409:    c.operator^=(b2);
+call    0 returned 1
+        1:  410:    return c;
+        -:  411:}

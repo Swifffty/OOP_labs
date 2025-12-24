@@ -41,5 +41,4 @@
 *.dwo
 cmake-build-debug/
 .idea/
-cmake-build-debug-coverage/
 .vscode/

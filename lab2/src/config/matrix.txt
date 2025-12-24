@@ -1,0 +1,6 @@
+CDD 0
+DDD 1
+CCD 3
+DCD 5
+CCC 7
+DCC 9

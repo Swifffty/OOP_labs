@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/denis/OOP_labs/lab0/0b/cmake-build-debug/_deps/googletest-subbuild/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

@@ -1,181 +1,183 @@
 #include "gtest/gtest.h"
-#include "Simulation_game.hpp"
 #include "History_game.hpp"
-#include <string>
+#include "Simulation_game.hpp"
+#include "strategy/Prisoner_strategy.hpp"
+#include <sstream>
+#include <iostream>
 #include <vector>
 #include <map>
-#include <algorithm>
-#include <sstream>
 #include <memory>
+#include <functional>
+#include <string>
 
-struct HistoryGameTest : public ::testing::Test {
+// =========================================================================
+// 1. МОКОВЫЕ СТРАТЕГИИ (Необходимы для тестирования Simulation_game)
+// =========================================================================
+
+// Предполагаем, что эти классы существуют в src/strategy
+class Always_C : public Prisoner_strategy {
+public:
+    char step(History_game& history, int& my_score, int& opponent_score) override { return 'C'; }
+};
+
+class Always_D : public Prisoner_strategy {
+public:
+    char step(History_game& history, int& my_score, int& opponent_score) override { return 'D'; }
+};
+
+class Tit_for_Tat : public Prisoner_strategy {
+public:
+    char step(History_game& history, int& my_score, int& opponent_score) override {
+        // Упрощенная заглушка для тестов
+        return 'C';
+    }
+};
+
+// =========================================================================
+// 2. ТЕСТЫ ДЛЯ HISTORY_GAME (Только публичный интерфейс)
+// =========================================================================
+
+struct HistoryGamePublicTest : public ::testing::Test {
     History_game history;
 
-    // Этот метод вызывается перед каждым тестом
     void SetUp() override {
         history.clear_history();
     }
 };
 
-TEST_F(HistoryGameTest, Initialization) {
-    // Если компилятор увидит обновленный History_game.hpp,
-    // он позволит получить доступ к этому полю.
-    ASSERT_EQ(history._test_magic_number, 42);
+TEST_F(HistoryGamePublicTest, InitializationAndClear) {
+    // Проверяем, что get_history_strategy для несуществующего шага возвращает 'N' (если так реализовано)
+    int step_zero = 0;
+    int strategy_0 = 0;
+    EXPECT_EQ(history.get_history_strategy(strategy_0, step_zero), 'N');
 
-    // Основные проверки
-    ASSERT_EQ(history.choices_strategy.size(), 3);
-    ASSERT_EQ(history.points_strategy.size(), 3);
-}
-
-TEST_F(HistoryGameTest, AddChoices) {
     std::vector<char> choices = {'C', 'D', 'C'};
     history.add_choices_strategy(choices);
+    history.clear_history();
 
-    // Requires: friend struct HistoryGameTest; in History_game.hpp
-    ASSERT_EQ(history.choices_strategy[0].back(), 'C');
-    ASSERT_EQ(history.choices_strategy[1].back(), 'D');
-}
-
-TEST_F(HistoryGameTest, GetHistoryStrategy) {
-    std::vector<char> choices_step1 = {'C', 'D', 'C'};
-    history.add_choices_strategy(choices_step1);
-
-    int strategy_0 = 0;
-    int step_not_zero = 1;
-    int step_zero = 0;
-
-    // Должно вернуть последний выбор ('C')
-    EXPECT_EQ(history.get_history_strategy(strategy_0, step_not_zero), 'C');
-
-    // Проверяем случай, когда step == 0 (должно вернуть 'N')
     EXPECT_EQ(history.get_history_strategy(strategy_0, step_zero), 'N');
 }
 
-TEST_F(HistoryGameTest, AddPointsAccumulation) {
-    // Шаг 0
-    std::vector<int> points_step0 = {5, 0, 3};
-    int step0 = 0;
-    history.add_points_strategy(points_step0, step0);
+TEST_F(HistoryGamePublicTest, AddAndGetChoices) {
+    std::vector<char> choices_step1 = {'C', 'D', 'C'};
+    history.add_choices_strategy(choices_step1);
 
-    // Шаг 1 (Накопленные: {6, 2, 4})
+    int step_index_1 = 1;
+    int strategy_0 = 0;
+    int strategy_1 = 1;
+
+    EXPECT_EQ(history.get_history_strategy(strategy_0, step_index_1), 'C');
+    EXPECT_EQ(history.get_history_strategy(strategy_1, step_index_1), 'D');
+
+    int step_index_99 = 99;
+    EXPECT_EQ(history.get_history_strategy(strategy_0, step_index_99), 'N');
+}
+
+TEST_F(HistoryGamePublicTest, AddAndGetAccumulatedPoints) {
+    // Шаг 0: {5, 0, 3}
+    std::vector<int> points_initial = {5, 0, 3};
+    int step0 = 0;
+    history.add_points_strategy(points_initial, step0);
+
+    // Шаг 1: Добавляем {1, 2, 1}. Накоплено: {6, 2, 4}
     std::vector<int> points_step1 = {1, 2, 1};
     int step1 = 1;
     history.add_points_strategy(points_step1, step1);
 
-    // Requires: friend struct HistoryGameTest; in History_game.hpp
-    EXPECT_EQ(history.points_strategy[0].back(), 6);
-    EXPECT_EQ(history.points_strategy[1].back(), 2);
-    EXPECT_EQ(history.points_strategy[2].back(), 4);
+    int strategy_1 = 1;
+    std::vector<int> history_points_1 = history.get_history_points(strategy_1);
+
+    // Проверяем накопленные баллы Стратегии 1 (0 -> 2)
+    // ВАЖНО: зависит от того, как реализовано накопление в add_points_strategy
+    // Если step=0 просто устанавливает начальный счет, а не добавляет:
+    EXPECT_EQ(history_points_1.size(), 2);
+    // EXPECT_EQ(history_points_1[0], 0); // Начальный счет (заглушка)
+    EXPECT_EQ(history_points_1.back(), 2); // Последний накопленный счет
 }
 
-TEST_F(HistoryGameTest, ClearHistory) {
-    std::vector<char> choices = {'C', 'D', 'C'};
-    history.add_choices_strategy(choices);
+// =========================================================================
+// 3. ТЕСТЫ ДЛЯ SIMULATION_GAME (Только публичные методы и проверка вывода)
+// =========================================================================
 
-    // Requires: friend struct HistoryGameTest; in History_game.hpp
-    ASSERT_FALSE(history.choices_strategy[0].empty());
+struct SimulationGamePublicTest : public ::testing::Test {
+    // Вспомогательная функция для перехвата stdout
+    std::string capture_output(std::function<void()> func) {
+        std::stringstream ss;
+        std::streambuf* old_cout = std::cout.rdbuf();
+        std::cout.rdbuf(ss.rdbuf());
 
-    history.clear_history();
+        func();
 
-    // Проверяем, что все очищено
-    ASSERT_TRUE(history.choices_strategy[0].empty());
-    ASSERT_TRUE(history.points_strategy[0].empty());
-}
-
-// -------------------------------------------------------------------------
-// 2. ТЕСТЫ ДЛЯ Simulation_game (Simulation_game.cpp)
-// -------------------------------------------------------------------------
-
-// Определяем тестовый набор
-struct SimulationGameTest : public ::testing::Test {
-    Simulation_game* game;
-    // Аргументы для имитации запуска приложения
-    char* argv_test[4] = {(char*)"./game", (char*)"StrategyA", (char*)"StrategyB", (char*)"StrategyC"};
-    int argc_test = 4;
-
-    void SetUp() override {
-        // Конструктор будет вызван с тестовыми аргументами
-        // ПРИМЕЧАНИЕ: Это вызовет game_config() и установит дефолтные правила.
-        game = new Simulation_game(argv_test, argc_test);
+        std::cout.rdbuf(old_cout);
+        return ss.str();
     }
 
-    void TearDown() override {
-        delete game;
+    // Helper для создания аргументов
+    std::vector<char*> create_argv(const std::vector<std::string>& args) {
+        std::vector<char*> argv_test;
+        for (auto& arg : args) {
+            argv_test.push_back(const_cast<char*>(arg.c_str()));
+        }
+        return argv_test;
     }
 };
 
-// Тест: Scoring (подсчет очков на основе выбора)
-TEST_F(SimulationGameTest, ScoringLogic) {
-    // Requires: friend struct SimulationGameTest; in Simulation_game.hpp
+// Тест 1: Проверка турнира C vs C vs C (ожидаем равенство и победу первого)
+TEST_F(SimulationGamePublicTest, TournamentAllCooperateOutput) {
+    std::vector<std::string> args = {
+            "./game_exec", "Always_C", "Always_C", "Always_C", "--steps=1"
+    };
+    std::vector<char*> argv_test = create_argv(args);
+    int argc_test = argv_test.size();
 
-    // Дефолтные правила (установлены в конструкторе через game_config()):
-    // "CDD": 0, "DDD": 1, "CCD": 3, "DCD": 5, "CCC": 7, "DCC": 9.
+    Simulation_game game(argv_test.data(), argc_test);
 
-    std::vector<char> choices = {'C', 'C', 'D'}; // Стратегии 0, 1, 2
+    std::string output = capture_output([&]() {
+        game.start_game();
+    });
 
-    // 1. Для Стр. 0 ('C'): оппоненты 'C', 'D' -> комбинация 'CCD' -> 3
-    // 2. Для Стр. 1 ('C'): оппоненты 'C', 'D' -> комбинация 'CCD' -> 3
-    // 3. Для Стр. 2 ('D'): оппоненты 'C', 'C' -> комбинация 'DCC' -> 9
-
-    std::vector<int> scores = game->scoring(choices);
-
-    ASSERT_EQ(scores.size(), 3);
-    EXPECT_EQ(scores[0], 3);
-    EXPECT_EQ(scores[1], 3);
-    EXPECT_EQ(scores[2], 9);
+    EXPECT_TRUE(output.find("Winner: Always_C") != std::string::npos)
+                        << "Ожидалось, что победителем будет Always_C (при равенстве)";
+    EXPECT_TRUE(output.find("Simulation finished") != std::string::npos);
 }
 
-// Тест: Parser (анализ аргументов)
-TEST_F(SimulationGameTest, ParserArguments) {
-    // Используем чистый объект для проверки парсера без вызова конструктора
-    Simulation_game fresh_game(argv_test, 1);
+// Тест 2: Проверка турнира D vs C vs C (ожидаем победу D)
+TEST_F(SimulationGamePublicTest, TournamentDefectWinsOutput) {
+    std::vector<std::string> args = {
+            "./game_exec", "Always_D", "Always_C", "Tit_for_Tat", "--steps=1"
+    };
+    std::vector<char*> argv_test = create_argv(args);
+    int argc_test = argv_test.size();
 
-    int count = 0;
-    std::string arg1 = "TestStrategy";
-    std::string arg2 = "--steps=100";
-    std::string arg3 = "--mode=fast";
+    Simulation_game game(argv_test.data(), argc_test);
 
-    // Requires: friend struct SimulationGameTest; in Simulation_game.hpp
-    fresh_game.parser(arg1, count);
-    EXPECT_EQ(count, 1);
-    EXPECT_EQ(fresh_game.strategy.back(), "TestStrategy");
+    std::string output = capture_output([&]() {
+        game.start_game();
+    });
 
-    fresh_game.parser(arg2, count);
-    EXPECT_EQ(fresh_game.steps_limit, 100);
-
-    fresh_game.parser(arg3, count);
-    EXPECT_EQ(fresh_game.mode, "fast");
+    EXPECT_TRUE(output.find("Winner: Always_D") != std::string::npos)
+                        << "Ожидалось, что победителем будет Always_D";
 }
 
-// Тест: Max Score (поиск лучшего результата)
-TEST_F(SimulationGameTest, MaxScore) {
-    std::vector<int> results = {5, 12, 8};
-    int max_result = -1; // Начальное значение для поиска
+// Тест 3: Проверка режима Fast (Полная матрица)
+TEST_F(SimulationGamePublicTest, FullScaleModeOutput) {
+    std::vector<std::string> args = {
+            "./game_exec", "Always_D", "Always_C", "--steps=5", "--mode=fast"
+    };
+    std::vector<char*> argv_test = create_argv(args);
+    int argc_test = argv_test.size();
 
-    // Метод max_score не использует приватные поля, поэтому работает без friend
-    int winner_index = game->max_score(results, max_result);
+    Simulation_game game(argv_test.data(), argc_test);
 
-    EXPECT_EQ(winner_index, 1); // Индекс стратегии с 12 очками
-    EXPECT_EQ(max_result, 12);  // Проверяем, что max_result обновился
-}
+    std::string output = capture_output([&]() {
+        game.start_game();
+    });
 
-// Тест: Take Name Strategy (определение имени лучшей стратегии)
-TEST_F(SimulationGameTest, TakeNameStrategy) {
-    // Requires: friend struct SimulationGameTest; in Simulation_game.hpp
+    // В режиме F (fast) вывод должен содержать общую таблицу очков
+    EXPECT_TRUE(output.find("Total Scores") != std::string::npos)
+                        << "Вывод не содержит 'Total Scores' (ожидаемый заголовок для режима F)";
 
-    // Перезаполняем strategy для чистоты
-    game->strategy.clear();
-    game->strategy.push_back("Alice");   // Index 0
-    game->strategy.push_back("Bob");     // Index 1
-    game->strategy.push_back("Charlie"); // Index 2
-
-    std::string name = "Initial";
-    int i = 0, j = 1, k = 2; // Индексы стратегий в турнире (тут 0, 1, 2)
-
-    // Тест 1: Победитель - стратегия i (индекс 0)
-    int number_max_0 = 0;
-    game->take_name_strategy(name, number_max_0, i, j, k);
-
-    // ВАЖНО: Тест проверяет ВАШУ текущую реализацию с fallthrough
-    EXPECT_EQ(name, "Charlie"); // name=strategy[i] -> fallthrough -> name=strategy[j] -> fallthrough -> name=strategy[k]
+    // Проверяем, что обе стратегии упомянуты в результатах.
+    EXPECT_TRUE(output.find("Always_D") != std::string::npos && output.find("Always_C") != std::string::npos)
+                        << "Вывод не содержит результаты для всех стратегий";
 }

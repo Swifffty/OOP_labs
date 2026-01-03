@@ -12,7 +12,7 @@ class ConverterFactory {
 public:
     ConverterFactory();
 
-    std::unique_ptr<Converter> createConverter(const std::string& cmd, const std::vector<std::string>& args, const std::vector<std::string>& inputFiles);
+    std::unique_ptr<Converter> getConverter(const std::string& cmd, const std::vector<std::string>& args, const std::vector<std::string>& inputFiles);
 
     void printAllHelp();
 

@@ -1,5 +1,0 @@
-/home/denis/OOP_labs/lab3/cmake-build-debug/CMakeFiles/lab3.dir
-/home/denis/OOP_labs/lab3/cmake-build-debug/CMakeFiles/unit_tests.dir
-/home/denis/OOP_labs/lab3/cmake-build-debug/CMakeFiles/test.dir
-/home/denis/OOP_labs/lab3/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/denis/OOP_labs/lab3/cmake-build-debug/CMakeFiles/rebuild_cache.dir

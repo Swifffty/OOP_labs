@@ -10,7 +10,11 @@ file(GLOB_RECURSE LIB_SOURCES
 )
 list(FILTER LIB_SOURCES EXCLUDE REGEX "src/main.cpp")
 
-add_executable(lab3 ${LIB_SOURCES} src/main.cpp)
+add_executable(lab3 ${LIB_SOURCES} src/main.cpp
+        src/creaters/Creater_mute.h
+        src/creaters/Creater_echo.h
+        src/creaters/Creater_mix.h
+)
 
 target_include_directories(lab3 PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}
@@ -31,6 +35,8 @@ if(GTest_FOUND)
     add_executable(unit_tests
             ${LIB_SOURCES}
             tests/test.cpp
+            src/creaters/Creater_mute.h
+            src/creaters/Creater_mix.h
     )
 
     target_include_directories(unit_tests PRIVATE

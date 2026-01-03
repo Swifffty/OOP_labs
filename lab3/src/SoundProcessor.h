@@ -4,8 +4,6 @@
 #include <string>
 #include <vector>
 #include "ConverterFactory.h"
-#include <memory>
-#include "../converter/Converter.h"
 
 class SoundProcessor {
 public:

@@ -21,7 +21,7 @@ void SoundProcessor::run(ConverterFactory &factory) {
 
     std::vector<std::unique_ptr<Converter>> chain;
     for (const auto& instr : instructions) {
-        auto conv = factory.createConverter(instr.command, instr.args, _inputPaths);
+        auto conv = factory.getConverter(instr.command, instr.args, _inputPaths);
         chain.push_back(std::move(conv));
     }
 

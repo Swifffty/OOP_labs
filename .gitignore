@@ -39,8 +39,6 @@
 
 # debug information files
 *.dwo
-.idea/
 cmake-build-debug/
-cmake-build-debug-coverage/
-lab1/cmake-build-debug-coverage/
-lab1/cmake-build-debug/
+.idea/
+.vscode/

@@ -14,7 +14,7 @@ public class InitOperations{
 
     public InitOperations() {
         operationMap = new HashMap<>();
-        logger.info("Начало работы с конфигом");
+        logger.info("Конфиг открыт");
     }
 
     private BufferedReader GetFile(InputStream configFactoryByte) {
@@ -26,10 +26,11 @@ public class InitOperations{
         return new BufferedReader (new InputStreamReader(configFactoryByte, StandardCharsets.UTF_8));
     }
 
-    public void ReadConfig(String ConfigName) throws Exception {
+    public void ReadConfig() throws IOException, NoSuchMethodException, InstantiationException, IllegalAccessException,
+    InvocationTargetException {
         logger.info("Чтение конфига...");
         String line;
-        try (InputStream configFactoryByte = InitOperations.class.getResourceAsStream(ConfigName)){
+        try (InputStream configFactoryByte = InitOperations.class.getResourceAsStream("config.txt")){
             BufferedReader configFactory = GetFile(configFactoryByte);
             while ((line = configFactory.readLine()) != null) {
                 String[] symbols = line.split(" ");
@@ -50,7 +51,7 @@ public class InitOperations{
     }
 
     public Map<String, CalcOperation> getOperationMap() {
-        return new HashMap<>(operationMap);
+        return operationMap;
     }
 
 }

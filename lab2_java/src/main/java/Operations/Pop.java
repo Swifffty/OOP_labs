@@ -1,6 +1,5 @@
 package Operations;
 
-import java.util.Queue;
 import java.util.ArrayDeque;
 import java.util.Map;
 import java.util.NoSuchElementException;
@@ -10,9 +9,9 @@ import org.slf4j.LoggerFactory;
 
 public class Pop implements CalcOperation {
     private final static Logger logger = LoggerFactory.getLogger(Pop.class);
-    public void execute(Queue<Double> stack, Map<String, Double> defineMap, String[] args) {
+    public void execute(ArrayDeque<Double> numbers, Map<String, Double> defineMap, String[] args) {
         try{
-        double pop = stack.remove();
+        double pop = numbers.removeFirst();
         logger.debug("Снят: {}", pop);
     } catch (NoSuchElementException e) {
             logger.error("недостаточно элементов на стеке");

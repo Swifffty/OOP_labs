@@ -3,14 +3,14 @@ package Operations;
 import java.util.ArrayDeque;
 import java.util.Map;
 import java.util.NoSuchElementException;
-
+import java.util.Queue;
 import Exceptions.FewElements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Minus implements CalcOperation {
     private final static Logger logger = LoggerFactory.getLogger(DefineParameters.class);
-    public void execute(ArrayDeque<Double> stack, Map<String, Double> defineMap, String[] args) throws FewElements {
+    public void execute(Queue<Double> stack, Map<String, Double> defineMap, String[] args) throws FewElements {
         try {
             Double a = stack.pop();
             Double b = stack.pop();

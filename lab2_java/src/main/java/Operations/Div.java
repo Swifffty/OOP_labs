@@ -2,7 +2,7 @@ package Operations;
 
 import Exceptions.DivByZero;
 import Exceptions.FewElements;
-
+import java.util.Queue;
 import java.util.ArrayDeque;
 import java.util.Map;
 import java.util.NoSuchElementException;
@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 
 public class Div implements CalcOperation {
     private final static Logger logger = LoggerFactory.getLogger(Div.class);
-    public void execute(ArrayDeque<Double> stack, Map<String, Double> defineMap, String[] args) throws FewElements, DivByZero {
+    public void execute(Queue<Double> stack, Map<String, Double> defineMap, String[] args) throws FewElements, DivByZero {
         try {
             Double a = stack.pop();
             Double b = stack.pop();

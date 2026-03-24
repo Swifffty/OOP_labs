@@ -2,7 +2,7 @@ package Operations;
 
 import Exceptions.ReassignmentParameter;
 import Exceptions.WrongArgsPush;
-
+import java.util.Queue;
 import java.util.ArrayDeque;
 import java.util.Map;
 import org.slf4j.Logger;
@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 
 public class DefineParameters implements CalcOperation {
     private final static Logger logger = LoggerFactory.getLogger(DefineParameters.class);
-    public void execute(ArrayDeque<Double> stack, Map<String, Double> defineMap, String[] args) {
+    public void execute(Queue<Double> stack, Map<String, Double> defineMap, String[] args) {
         if (args.length == 3 && args[2].matches("\\d+") && args[1].matches("[a-zA-Z]+")) {
             if (defineMap.containsKey(args[1])) {
                 logger.error("Попытка переназначить параметр");

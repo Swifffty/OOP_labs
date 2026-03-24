@@ -5,6 +5,7 @@ import Exceptions.SqrtByNegative;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Queue;
 import java.util.ArrayDeque;
 import java.util.Map;
 import java.util.NoSuchElementException;
@@ -12,7 +13,7 @@ import java.lang.Math;
 
 public class Sqrt implements CalcOperation {
     private final static Logger logger = LoggerFactory.getLogger(Sqrt.class);
-    public void execute(ArrayDeque<Double> stack, Map<String, Double> defineMap, String[] args) throws FewElements, SqrtByNegative {
+    public void execute(Queue<Double> stack, Map<String, Double> defineMap, String[] args) throws FewElements, SqrtByNegative {
         try {
             Double a = stack.pop();
             logger.debug("Корень из {}", a);

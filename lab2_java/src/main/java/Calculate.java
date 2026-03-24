@@ -1,7 +1,8 @@
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayDeque;
+import java.util.ArrayDeque
+import java.util.Queue;;
 
 import Exceptions.*;
 import Operations.CalcOperation;
@@ -17,7 +18,7 @@ import Exceptions.ConfigException;
 
 public class Calculate implements AutoCloseable {
     private final static Logger logger = LoggerFactory.getLogger(Calculate.class);
-    private final ArrayDeque<Double> stack;
+    private final Queue<Double> stack;
     private final Map<String, CalcOperation> operation;
     private final Map<String, Double> defineMap;
     private final BufferedReader comands;

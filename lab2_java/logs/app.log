@@ -1,0 +1,1525 @@
+2026-03-24 16:34:39.776 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:34:39.785 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:34:39.785 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:34:39.786 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:34:39.786 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:34:39.787 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:34:39.788 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:34:39.788 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:34:39.789 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:34:39.789 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:34:39.789 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:34:39.789 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:34:39.790 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:34:39.790 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:34:39.790 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:34:39.790 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:34:39.791 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:34:39.791 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:34:39.791 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:34:39.791 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:34:39.791 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:34:39.791 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:34:39.791 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:34:39.791 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:34:39.791 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:34:39.791 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:34:39.791 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:34:39.791 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:34:39.791 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:34:39.791 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:34:39.791 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:34:39.791 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:34:39.792 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:34:39.792 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:34:39.792 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:34:39.792 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:34:39.792 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:34:39.792 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:34:39.792 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:34:39.792 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:34:39.792 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:34:39.792 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:34:39.792 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:34:39.792 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:34:39.792 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:34:39.792 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 10
+2026-03-24 16:34:39.792 [Test worker] DEBUG Operations.DefineParameters - Define a -> 10
+2026-03-24 16:34:39.792 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:34:39.792 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:34:39.792 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:34:39.792 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:34:39.792 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:34:39.792 [Test worker] DEBUG Operations.Div - 2.0 / 10.0
+2026-03-24 16:34:39.792 [Test worker] DEBUG Operations.Div - Result: 0.2
+2026-03-24 16:34:39.793 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:34:39.793 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:34:39.793 [Test worker] DEBUG Calculate - Обработка операции: -
+2026-03-24 16:34:39.793 [Test worker] DEBUG Operations.DefineParameters - 0.2 - 1.0
+2026-03-24 16:34:39.793 [Test worker] DEBUG Operations.DefineParameters - Result: 0.8
+2026-03-24 16:34:39.793 [Test worker] DEBUG Calculate - Обработка операции: PUSH 3
+2026-03-24 16:34:39.793 [Test worker] DEBUG Operations.Push - Положил на стек: 3
+2026-03-24 16:34:39.793 [Test worker] DEBUG Calculate - Обработка операции: *
+2026-03-24 16:34:39.793 [Test worker] DEBUG Operations.Mult - 0.8 * 3.0
+2026-03-24 16:34:39.793 [Test worker] DEBUG Operations.Mult - Result: 2.4000000000000004
+2026-03-24 16:34:39.793 [Test worker] DEBUG Calculate - Обработка операции: PUSH 4
+2026-03-24 16:34:39.793 [Test worker] DEBUG Operations.Push - Положил на стек: 4
+2026-03-24 16:34:39.793 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:34:39.793 [Test worker] DEBUG Operations.Plus - 2.4000000000000004 + 4.0
+2026-03-24 16:34:39.793 [Test worker] DEBUG Operations.Plus - Result: 6.4
+2026-03-24 16:34:39.793 [Test worker] DEBUG Calculate - Обработка операции: SQRT
+2026-03-24 16:34:39.793 [Test worker] DEBUG Operations.Sqrt - Корень из 6.4
+2026-03-24 16:34:39.793 [Test worker] DEBUG Operations.Sqrt - Result: 2.5298221281347035
+2026-03-24 16:34:39.793 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:34:39.793 [Test worker] DEBUG Operations.Plus - Вывел: 2.5298221281347035
+2026-03-24 16:34:39.793 [Test worker] DEBUG Calculate - Обработка операции: POP
+2026-03-24 16:34:39.793 [Test worker] DEBUG Operations.Pop - Снят: 2.5298221281347035
+2026-03-24 16:34:39.793 [Test worker] DEBUG Calculate - Обработка операции: # comment
+2026-03-24 16:34:39.793 [Test worker] DEBUG Calculate - Обработка операции: 
+2026-03-24 16:34:39.793 [Test worker] ERROR Calculate - Операция не найдена
+2026-03-24 16:34:39.796 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:35:01.429 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:35:01.432 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:35:01.432 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:35:01.433 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:35:01.433 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:35:01.434 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:35:01.435 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:35:01.435 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:35:01.435 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:35:01.435 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:35:01.436 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:35:01.436 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:35:01.436 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:35:01.436 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:35:01.437 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:35:01.437 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:35:01.437 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:35:01.438 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:35:27.884 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:35:27.887 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:35:27.888 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:35:27.888 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:35:27.888 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:35:27.888 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:35:27.888 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:35:27.888 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:35:27.890 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:35:27.890 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:35:27.891 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:35:27.891 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:35:27.891 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:35:27.891 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:35:27.891 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:35:27.891 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:35:27.892 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:35:27.892 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:35:27.892 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:35:27.892 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:35:27.892 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:35:27.893 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:35:27.893 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:35:27.893 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:35:27.893 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:35:27.893 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:35:27.893 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:35:27.894 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 10
+2026-03-24 16:35:27.894 [Test worker] DEBUG Operations.DefineParameters - Define a -> 10
+2026-03-24 16:35:27.894 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:35:27.894 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:35:27.894 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:35:27.894 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:35:27.894 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:35:27.894 [Test worker] DEBUG Operations.Div - 2.0 / 10.0
+2026-03-24 16:35:27.894 [Test worker] DEBUG Operations.Div - Result: 0.2
+2026-03-24 16:35:27.894 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:35:27.895 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:35:27.895 [Test worker] DEBUG Calculate - Обработка операции: -
+2026-03-24 16:35:27.895 [Test worker] DEBUG Operations.DefineParameters - 0.2 - 1.0
+2026-03-24 16:35:27.895 [Test worker] DEBUG Operations.DefineParameters - Result: 0.8
+2026-03-24 16:35:27.895 [Test worker] DEBUG Calculate - Обработка операции: PUSH 3
+2026-03-24 16:35:27.895 [Test worker] DEBUG Operations.Push - Положил на стек: 3
+2026-03-24 16:35:27.895 [Test worker] DEBUG Calculate - Обработка операции: *
+2026-03-24 16:35:27.895 [Test worker] DEBUG Operations.Mult - 0.8 * 3.0
+2026-03-24 16:35:27.895 [Test worker] DEBUG Operations.Mult - Result: 2.4000000000000004
+2026-03-24 16:35:27.895 [Test worker] DEBUG Calculate - Обработка операции: PUSH 4
+2026-03-24 16:35:27.895 [Test worker] DEBUG Operations.Push - Положил на стек: 4
+2026-03-24 16:35:27.895 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:35:27.895 [Test worker] DEBUG Operations.Plus - 2.4000000000000004 + 4.0
+2026-03-24 16:35:27.895 [Test worker] DEBUG Operations.Plus - Result: 6.4
+2026-03-24 16:35:27.895 [Test worker] DEBUG Calculate - Обработка операции: SQRT
+2026-03-24 16:35:27.896 [Test worker] DEBUG Operations.Sqrt - Корень из 6.4
+2026-03-24 16:35:27.896 [Test worker] DEBUG Operations.Sqrt - Result: 2.5298221281347035
+2026-03-24 16:35:27.896 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:35:27.896 [Test worker] DEBUG Operations.Plus - Вывел: 2.5298221281347035
+2026-03-24 16:35:27.896 [Test worker] DEBUG Calculate - Обработка операции: POP
+2026-03-24 16:35:27.896 [Test worker] DEBUG Operations.Pop - Снят: 2.5298221281347035
+2026-03-24 16:35:27.896 [Test worker] DEBUG Calculate - Обработка операции: # comment
+2026-03-24 16:35:27.896 [Test worker] DEBUG Calculate - Обработка операции: 
+2026-03-24 16:35:27.896 [Test worker] ERROR Calculate - Операция не найдена
+2026-03-24 16:36:01.972 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:36:01.975 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:36:01.976 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:36:01.976 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:36:01.976 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:36:01.977 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:36:01.979 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:36:01.979 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:36:01.980 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:36:01.980 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:36:01.981 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:36:01.981 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:36:01.981 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:36:01.982 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:36:01.982 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:36:01.982 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:36:01.982 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:36:20.990 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:36:20.990 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:36:20.991 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:36:20.991 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:36:20.991 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:36:20.991 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:36:20.991 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:36:20.991 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:36:33.449 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:36:33.452 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:36:33.452 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:36:33.452 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:36:33.452 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:36:33.453 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:36:33.454 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:36:33.454 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:36:33.454 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:36:33.455 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:36:33.455 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:36:33.455 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:36:33.455 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:36:33.455 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:36:33.456 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:36:33.456 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:36:33.456 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:36:35.684 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:36:35.685 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:36:35.686 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:36:35.686 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:36:35.686 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:36:35.686 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:36:35.686 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:36:35.686 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:36:35.686 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:36:35.687 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:36:35.687 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:36:35.687 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:36:35.687 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:36:35.687 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:36:35.687 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:36:35.687 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:36:35.688 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:36:35.688 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:36:35.688 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:36:35.688 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:36:35.688 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:36:35.688 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:36:35.688 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:36:35.688 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:36:35.688 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:36:35.688 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:36:35.689 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:36:35.689 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:36:35.689 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 11
+2026-03-24 16:36:35.689 [Test worker] DEBUG Operations.DefineParameters - Define a -> 11
+2026-03-24 16:36:35.689 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:36:35.689 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:36:35.689 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:36:35.689 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:36:35.689 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:36:35.689 [Test worker] DEBUG Operations.Div - 2.0 / 11.0
+2026-03-24 16:36:35.689 [Test worker] DEBUG Operations.Div - Result: 0.18181818181818182
+2026-03-24 16:36:35.690 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:36:35.690 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:36:35.690 [Test worker] DEBUG Calculate - Обработка операции: -
+2026-03-24 16:36:35.690 [Test worker] DEBUG Operations.DefineParameters - 0.18181818181818182 - 1.0
+2026-03-24 16:36:35.690 [Test worker] DEBUG Operations.DefineParameters - Result: 0.8181818181818181
+2026-03-24 16:36:35.690 [Test worker] DEBUG Calculate - Обработка операции: PUSH 3
+2026-03-24 16:36:35.690 [Test worker] DEBUG Operations.Push - Положил на стек: 3
+2026-03-24 16:36:35.690 [Test worker] DEBUG Calculate - Обработка операции: *
+2026-03-24 16:36:35.690 [Test worker] DEBUG Operations.Mult - 0.8181818181818181 * 3.0
+2026-03-24 16:36:35.690 [Test worker] DEBUG Operations.Mult - Result: 2.454545454545454
+2026-03-24 16:36:35.690 [Test worker] DEBUG Calculate - Обработка операции: PUSH 4
+2026-03-24 16:36:35.690 [Test worker] DEBUG Operations.Push - Положил на стек: 4
+2026-03-24 16:36:35.690 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:36:35.691 [Test worker] DEBUG Operations.Plus - 2.454545454545454 + 4.0
+2026-03-24 16:36:35.691 [Test worker] DEBUG Operations.Plus - Result: 6.454545454545454
+2026-03-24 16:36:35.691 [Test worker] DEBUG Calculate - Обработка операции: SQRT
+2026-03-24 16:36:35.691 [Test worker] DEBUG Operations.Sqrt - Корень из 6.454545454545454
+2026-03-24 16:36:35.691 [Test worker] DEBUG Operations.Sqrt - Result: 2.540579747724022
+2026-03-24 16:36:35.691 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:36:35.691 [Test worker] DEBUG Operations.Plus - Вывел: 2.540579747724022
+2026-03-24 16:36:35.691 [Test worker] DEBUG Calculate - Обработка операции: POP
+2026-03-24 16:36:35.691 [Test worker] DEBUG Operations.Pop - Снят: 2.540579747724022
+2026-03-24 16:36:35.691 [Test worker] DEBUG Calculate - Обработка операции: # comment
+2026-03-24 16:36:35.691 [Test worker] DEBUG Calculate - Обработка операции: 
+2026-03-24 16:36:35.691 [Test worker] ERROR Calculate - Операция не найдена
+2026-03-24 16:37:29.081 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:37:29.084 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:37:29.085 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:37:29.085 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:37:29.085 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:37:29.086 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:37:29.087 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:37:29.088 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:37:29.088 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:37:29.088 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:37:29.089 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:37:29.089 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:37:29.089 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:37:29.089 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:37:29.090 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:37:29.090 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:37:29.090 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:38:14.030 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:38:14.031 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:38:14.031 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:38:14.031 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:38:14.031 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:38:14.031 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:38:14.031 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:38:14.031 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:38:14.031 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:38:14.033 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:38:14.033 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:38:14.033 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:38:14.033 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:38:14.033 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:38:14.033 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:38:14.033 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:38:14.033 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:38:14.034 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:38:14.035 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:38:14.035 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:38:14.035 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:38:14.035 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:38:14.035 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:38:14.035 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:38:14.035 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:38:14.035 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:38:14.035 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:38:14.035 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:38:14.035 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 10
+2026-03-24 16:38:14.035 [Test worker] DEBUG Operations.DefineParameters - Define a -> 10
+2026-03-24 16:38:14.035 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:38:14.035 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:38:14.035 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:38:14.035 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:38:14.036 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:38:14.036 [Test worker] DEBUG Operations.Div - 2.0 / 10.0
+2026-03-24 16:38:14.036 [Test worker] DEBUG Operations.Div - Result: 0.2
+2026-03-24 16:38:14.036 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:38:14.036 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:38:14.036 [Test worker] DEBUG Calculate - Обработка операции: -
+2026-03-24 16:38:14.036 [Test worker] DEBUG Operations.DefineParameters - 0.2 - 1.0
+2026-03-24 16:38:14.036 [Test worker] DEBUG Operations.DefineParameters - Result: 0.8
+2026-03-24 16:38:14.036 [Test worker] DEBUG Calculate - Обработка операции: PUSH 3
+2026-03-24 16:38:14.036 [Test worker] DEBUG Operations.Push - Положил на стек: 3
+2026-03-24 16:38:14.036 [Test worker] DEBUG Calculate - Обработка операции: *
+2026-03-24 16:38:14.036 [Test worker] DEBUG Operations.Mult - 0.8 * 3.0
+2026-03-24 16:38:14.036 [Test worker] DEBUG Operations.Mult - Result: 2.4000000000000004
+2026-03-24 16:38:14.036 [Test worker] DEBUG Calculate - Обработка операции: PUSH 4
+2026-03-24 16:38:14.036 [Test worker] DEBUG Operations.Push - Положил на стек: 4
+2026-03-24 16:38:14.036 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:38:14.036 [Test worker] DEBUG Operations.Plus - 2.4000000000000004 + 4.0
+2026-03-24 16:38:14.036 [Test worker] DEBUG Operations.Plus - Result: 6.4
+2026-03-24 16:38:14.036 [Test worker] DEBUG Calculate - Обработка операции: SQRT
+2026-03-24 16:38:14.036 [Test worker] DEBUG Operations.Sqrt - Корень из 6.4
+2026-03-24 16:38:14.037 [Test worker] DEBUG Operations.Sqrt - Result: 2.5298221281347035
+2026-03-24 16:38:14.037 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:38:14.037 [Test worker] DEBUG Operations.Plus - Вывел: 2.5298221281347035
+2026-03-24 16:38:14.037 [Test worker] DEBUG Calculate - Обработка операции: POP
+2026-03-24 16:38:14.037 [Test worker] DEBUG Operations.Pop - Снят: 2.5298221281347035
+2026-03-24 16:38:14.037 [Test worker] DEBUG Calculate - Обработка операции: # comment
+2026-03-24 16:38:14.037 [Test worker] DEBUG Calculate - Обработка операции: 
+2026-03-24 16:38:14.037 [Test worker] ERROR Calculate - Операция не найдена
+2026-03-24 16:38:16.979 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:38:16.982 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:38:16.983 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:38:16.983 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:38:16.983 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:38:16.984 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:38:16.986 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:38:16.986 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:38:16.987 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:38:16.987 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:38:16.987 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:38:16.987 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:38:16.988 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:38:16.988 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:38:16.988 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:38:16.989 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:38:16.989 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:38:19.511 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:38:19.512 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:38:19.512 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:38:19.513 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:38:19.513 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:38:19.513 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:38:19.513 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:38:19.513 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:38:19.513 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:38:19.516 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:38:19.516 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:38:19.516 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:38:19.517 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:38:19.517 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:38:19.517 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:38:19.517 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:38:19.518 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:38:19.518 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:38:19.519 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:38:19.521 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:38:19.521 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:38:19.521 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:38:19.522 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:38:19.522 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:38:19.522 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:38:19.522 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:38:19.522 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:38:19.523 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:38:19.528 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 10
+2026-03-24 16:38:19.529 [Test worker] DEBUG Operations.DefineParameters - Define a -> 10
+2026-03-24 16:38:19.529 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:38:19.529 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:38:19.530 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:38:19.531 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:38:19.531 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:38:19.532 [Test worker] DEBUG Operations.Div - 2.0 / 10.0
+2026-03-24 16:38:19.532 [Test worker] DEBUG Operations.Div - Result: 0.2
+2026-03-24 16:38:19.532 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:38:19.533 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:38:33.686 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:38:33.689 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:38:33.689 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:38:33.689 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:38:33.689 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:38:33.690 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:38:33.692 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:38:33.692 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:38:33.692 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:38:33.692 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:38:33.693 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:38:33.693 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:38:33.693 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:38:33.693 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:38:33.694 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:38:33.694 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:38:33.694 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:39:07.696 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:39:07.696 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:39:08.462 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:39:08.463 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:39:09.434 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:39:09.434 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:39:09.434 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:39:09.434 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:39:09.434 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:39:09.436 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:39:09.436 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:39:09.436 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:39:09.436 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:39:09.436 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:39:09.436 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:39:09.436 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:39:09.437 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:39:09.438 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:39:09.438 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:39:09.438 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:39:09.438 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:39:09.438 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:39:09.438 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:39:09.438 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:39:09.438 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:39:09.438 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:39:09.438 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:39:09.438 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:39:09.438 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 32
+2026-03-24 16:39:09.439 [Test worker] DEBUG Operations.DefineParameters - Define b -> 32
+2026-03-24 16:39:09.439 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:39:09.439 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:39:09.439 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:39:09.439 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:39:09.439 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:39:09.439 [Test worker] ERROR Operations.Div - недостаточно элементов на стеке
+2026-03-24 16:39:38.956 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:39:38.958 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:39:38.959 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:39:38.959 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:39:38.959 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:39:38.960 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:39:38.961 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:39:38.961 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:39:38.961 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:39:38.961 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:39:38.961 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:39:38.962 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:39:38.962 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:39:38.962 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:39:38.962 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:39:38.962 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:39:38.962 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:39:38.963 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:39:38.963 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:39:38.963 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:39:38.963 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:39:38.963 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:39:38.963 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:39:38.963 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:39:38.963 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:39:38.963 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:39:38.964 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:39:38.964 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:39:38.964 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:39:38.964 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:39:44.624 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:39:44.624 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:39:44.624 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:39:44.624 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:39:44.624 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:39:44.624 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:39:44.624 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:39:44.624 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:39:44.624 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:39:44.624 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:39:44.624 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:39:44.625 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:39:44.625 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:39:44.625 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:39:44.625 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:39:44.625 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 10
+2026-03-24 16:39:47.663 [Test worker] DEBUG Operations.DefineParameters - Define b -> 10
+2026-03-24 16:39:47.664 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:39:47.665 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:39:47.665 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:39:47.665 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:39:47.665 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:39:47.665 [Test worker] ERROR Operations.Div - недостаточно элементов на стеке
+2026-03-24 16:39:47.668 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:39:56.255 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:39:56.257 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:39:56.258 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:39:56.258 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:39:56.258 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:39:56.258 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:39:56.259 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:39:56.259 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:39:56.259 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:39:56.260 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:39:56.260 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:39:56.260 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:39:56.260 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:39:56.260 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:39:56.260 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:39:56.261 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:39:56.261 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:39:56.261 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:39:56.261 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:39:56.261 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:39:56.261 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:39:56.261 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:39:56.261 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:39:56.261 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:39:56.261 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:39:56.261 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:39:56.262 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:39:56.262 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:39:56.262 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:39:56.262 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:40:01.803 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:40:01.803 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:40:01.803 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:40:01.804 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:40:01.804 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:40:01.804 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:40:01.804 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:40:01.804 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:40:01.804 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:40:01.804 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:40:01.804 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:40:01.804 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:40:01.804 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:40:01.804 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:40:01.804 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:40:01.804 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 10
+2026-03-24 16:40:03.948 [Test worker] DEBUG Operations.DefineParameters - Define a -> 10
+2026-03-24 16:40:03.949 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:40:08.986 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:40:08.987 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:40:13.610 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:40:13.611 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:40:19.265 [Test worker] DEBUG Operations.Div - 2.0 / 10.0
+2026-03-24 16:40:19.265 [Test worker] DEBUG Operations.Div - Result: 0.2
+2026-03-24 16:40:19.265 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:40:22.323 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:40:22.325 [Test worker] DEBUG Calculate - Обработка операции: -
+2026-03-24 16:40:22.325 [Test worker] DEBUG Operations.DefineParameters - 0.2 - 1.0
+2026-03-24 16:40:22.325 [Test worker] DEBUG Operations.DefineParameters - Result: 0.8
+2026-03-24 16:40:22.325 [Test worker] DEBUG Calculate - Обработка операции: PUSH 3
+2026-03-24 16:40:22.325 [Test worker] DEBUG Operations.Push - Положил на стек: 3
+2026-03-24 16:40:22.325 [Test worker] DEBUG Calculate - Обработка операции: *
+2026-03-24 16:40:22.325 [Test worker] DEBUG Operations.Mult - 0.8 * 3.0
+2026-03-24 16:40:22.326 [Test worker] DEBUG Operations.Mult - Result: 2.4000000000000004
+2026-03-24 16:40:22.326 [Test worker] DEBUG Calculate - Обработка операции: PUSH 4
+2026-03-24 16:40:22.326 [Test worker] DEBUG Operations.Push - Положил на стек: 4
+2026-03-24 16:40:22.326 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:40:22.326 [Test worker] DEBUG Operations.Plus - 2.4000000000000004 + 4.0
+2026-03-24 16:40:22.326 [Test worker] DEBUG Operations.Plus - Result: 6.4
+2026-03-24 16:40:22.326 [Test worker] DEBUG Calculate - Обработка операции: SQRT
+2026-03-24 16:40:22.326 [Test worker] DEBUG Operations.Sqrt - Корень из 6.4
+2026-03-24 16:40:22.327 [Test worker] DEBUG Operations.Sqrt - Result: 2.5298221281347035
+2026-03-24 16:40:22.327 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:40:22.327 [Test worker] DEBUG Operations.Plus - Вывел: 2.5298221281347035
+2026-03-24 16:40:22.327 [Test worker] DEBUG Calculate - Обработка операции: POP
+2026-03-24 16:40:22.327 [Test worker] DEBUG Operations.Pop - Снят: 2.5298221281347035
+2026-03-24 16:40:22.327 [Test worker] DEBUG Calculate - Обработка операции: # comment
+2026-03-24 16:40:22.327 [Test worker] DEBUG Calculate - Обработка операции: 
+2026-03-24 16:40:22.327 [Test worker] ERROR Calculate - Операция не найдена
+2026-03-24 16:40:22.332 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:41:17.007 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:41:17.009 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:41:17.009 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:41:17.009 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:41:17.009 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:41:17.010 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:41:17.010 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:41:17.011 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:41:17.011 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:41:17.011 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:41:17.011 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:41:17.011 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:41:17.011 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:41:17.012 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:41:17.012 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:41:17.012 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:41:17.012 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:41:17.012 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:41:17.012 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:41:17.012 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:41:17.012 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:41:17.012 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:41:17.012 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:41:17.012 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:41:17.012 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:41:17.013 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:41:17.013 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:41:17.013 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:41:17.013 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:41:17.013 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:41:17.013 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:41:17.013 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:41:17.013 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:41:17.013 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:41:17.013 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:41:17.013 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:41:17.013 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:41:17.013 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:41:17.013 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:41:17.013 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:41:17.013 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:41:17.013 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:41:17.013 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:41:17.013 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:41:17.013 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:41:17.014 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 10
+2026-03-24 16:41:17.014 [Test worker] DEBUG Operations.DefineParameters - Define a -> 10
+2026-03-24 16:41:17.014 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:41:17.014 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:41:17.014 [Test worker] DEBUG Calculate - Обработка операции: PUSH 10
+2026-03-24 16:41:17.014 [Test worker] DEBUG Operations.Push - Положил на стек: 10
+2026-03-24 16:41:17.014 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:41:17.014 [Test worker] DEBUG Operations.Div - 10.0 / 2.0
+2026-03-24 16:41:17.014 [Test worker] DEBUG Operations.Div - Result: 5.0
+2026-03-24 16:41:17.014 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:41:17.014 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:41:17.014 [Test worker] DEBUG Calculate - Обработка операции: -
+2026-03-24 16:41:17.014 [Test worker] DEBUG Operations.DefineParameters - 5.0 - 1.0
+2026-03-24 16:41:17.014 [Test worker] DEBUG Operations.DefineParameters - Result: -4.0
+2026-03-24 16:41:17.014 [Test worker] DEBUG Calculate - Обработка операции: PUSH -3
+2026-03-24 16:41:17.014 [Test worker] DEBUG Operations.Push - Положил на стек: -3
+2026-03-24 16:41:17.014 [Test worker] DEBUG Calculate - Обработка операции: *
+2026-03-24 16:41:17.014 [Test worker] ERROR Operations.Mult - недостаточно элементов на стеке
+2026-03-24 16:41:17.016 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:41:39.450 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:41:39.452 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:41:39.453 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:41:39.453 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:41:39.453 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:41:39.454 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:41:39.455 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:41:39.455 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:41:39.455 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:41:39.455 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:41:39.456 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:41:39.456 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:41:39.456 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:41:39.456 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:41:39.456 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:41:39.456 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:41:39.456 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:41:40.928 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:41:40.929 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:41:40.929 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:41:40.929 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:41:40.929 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:41:40.929 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:41:40.929 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:41:40.929 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:41:40.929 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:41:40.930 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:41:40.930 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:41:40.931 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:41:40.931 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:41:45.929 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:41:45.930 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:41:45.930 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:41:45.930 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:41:45.930 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:41:45.930 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:41:45.930 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:41:45.930 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:41:45.930 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:41:45.930 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:41:45.931 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:41:45.931 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:41:45.931 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:41:45.931 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:41:45.931 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:41:45.931 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 10
+2026-03-24 16:41:48.482 [Test worker] DEBUG Operations.DefineParameters - Define a -> 10
+2026-03-24 16:41:48.482 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:41:49.362 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:41:49.363 [Test worker] DEBUG Calculate - Обработка операции: PUSH 10
+2026-03-24 16:41:58.453 [Test worker] DEBUG Operations.Push - Положил на стек: 10
+2026-03-24 16:41:58.453 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:42:02.614 [Test worker] DEBUG Operations.Div - 10.0 / 2.0
+2026-03-24 16:42:02.615 [Test worker] DEBUG Operations.Div - Result: 5.0
+2026-03-24 16:42:02.615 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:42:10.753 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:42:10.754 [Test worker] DEBUG Calculate - Обработка операции: -
+2026-03-24 16:42:15.904 [Test worker] DEBUG Operations.DefineParameters - 5.0 - 1.0
+2026-03-24 16:42:15.905 [Test worker] DEBUG Operations.DefineParameters - Result: -4.0
+2026-03-24 16:42:15.905 [Test worker] DEBUG Calculate - Обработка операции: PUSH -3
+2026-03-24 16:42:18.902 [Test worker] DEBUG Operations.Push - Положил на стек: -3
+2026-03-24 16:42:18.903 [Test worker] DEBUG Calculate - Обработка операции: *
+2026-03-24 16:42:54.293 [Test worker] ERROR Operations.Mult - недостаточно элементов на стеке
+2026-03-24 16:42:54.305 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:42:55.439 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:42:55.441 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:42:55.442 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:42:55.442 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:42:55.442 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:42:55.443 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:42:55.444 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:42:55.444 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:42:55.445 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:42:55.445 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:42:55.445 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:42:55.445 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:42:55.445 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:42:55.446 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:42:55.446 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:42:55.446 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:42:55.446 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:42:55.447 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:42:55.447 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:42:55.447 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:42:55.447 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:42:55.447 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:42:55.447 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:42:55.447 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:42:55.447 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:42:55.447 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:42:55.447 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:42:55.447 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:42:55.447 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:42:55.447 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:42:57.382 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:42:57.383 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:42:57.383 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:42:57.383 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:42:57.383 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:42:57.384 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:42:57.384 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:42:57.384 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:42:57.384 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:42:57.384 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:42:57.384 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:42:57.384 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:42:57.384 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:42:57.385 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:42:57.385 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:42:57.385 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 10
+2026-03-24 16:42:57.385 [Test worker] DEBUG Operations.DefineParameters - Define a -> 10
+2026-03-24 16:42:57.385 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:42:57.385 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:42:57.385 [Test worker] DEBUG Calculate - Обработка операции: PUSH 10
+2026-03-24 16:42:57.385 [Test worker] DEBUG Operations.Push - Положил на стек: 10
+2026-03-24 16:42:57.385 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:42:57.386 [Test worker] DEBUG Operations.Div - 10.0 / 2.0
+2026-03-24 16:42:57.386 [Test worker] DEBUG Operations.Div - Result: 5.0
+2026-03-24 16:42:57.386 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:42:57.386 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:42:57.386 [Test worker] DEBUG Calculate - Обработка операции: -
+2026-03-24 16:42:57.386 [Test worker] DEBUG Operations.DefineParameters - 5.0 - 1.0
+2026-03-24 16:42:57.386 [Test worker] DEBUG Operations.DefineParameters - Result: -4.0
+2026-03-24 16:42:57.386 [Test worker] DEBUG Calculate - Обработка операции: PUSH -3
+2026-03-24 16:42:57.386 [Test worker] DEBUG Operations.Push - Положил на стек: -3
+2026-03-24 16:42:57.386 [Test worker] DEBUG Calculate - Обработка операции: *
+2026-03-24 16:42:57.387 [Test worker] ERROR Operations.Mult - недостаточно элементов на стеке
+2026-03-24 16:43:03.814 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:43:06.229 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:43:06.231 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:43:06.232 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:43:06.232 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:43:06.232 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:43:06.232 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:43:06.233 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:43:06.234 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:43:06.234 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:43:06.234 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:43:06.234 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:43:06.234 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:43:06.234 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:43:06.234 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:43:06.235 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:43:06.235 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:43:06.235 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:43:09.600 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:43:09.600 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:43:09.600 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:43:09.600 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:43:09.600 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:43:09.600 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:43:09.600 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:43:09.601 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:43:09.601 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:43:09.601 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:43:09.601 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:43:09.601 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:43:09.601 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:43:09.601 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:43:09.602 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:43:09.602 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:43:09.602 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:43:09.602 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:43:09.602 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:43:09.602 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:43:09.602 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:43:09.602 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:43:09.602 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:43:09.602 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:43:09.602 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:43:09.602 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:43:09.602 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:43:09.603 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:43:09.603 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 10
+2026-03-24 16:43:09.603 [Test worker] DEBUG Operations.DefineParameters - Define a -> 10
+2026-03-24 16:43:09.603 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:43:09.603 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:43:09.603 [Test worker] DEBUG Calculate - Обработка операции: PUSH 10
+2026-03-24 16:43:09.603 [Test worker] DEBUG Operations.Push - Положил на стек: 10
+2026-03-24 16:43:09.603 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:43:09.603 [Test worker] DEBUG Operations.Div - 10.0 / 2.0
+2026-03-24 16:43:09.603 [Test worker] DEBUG Operations.Div - Result: 5.0
+2026-03-24 16:43:09.603 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:43:09.603 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:43:09.603 [Test worker] DEBUG Calculate - Обработка операции: -
+2026-03-24 16:43:09.603 [Test worker] DEBUG Operations.DefineParameters - 5.0 - 1.0
+2026-03-24 16:43:09.603 [Test worker] DEBUG Operations.DefineParameters - Result: -4.0
+2026-03-24 16:43:09.603 [Test worker] DEBUG Calculate - Обработка операции: PUSH -3
+2026-03-24 16:43:09.603 [Test worker] DEBUG Operations.Push - Положил на стек: -3
+2026-03-24 16:43:09.603 [Test worker] DEBUG Calculate - Обработка операции: *
+2026-03-24 16:43:09.604 [Test worker] ERROR Operations.Mult - недостаточно элементов на стеке
+2026-03-24 16:43:09.606 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:43:10.685 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:43:10.688 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:43:10.688 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:43:10.688 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:43:10.688 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:43:10.689 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:43:10.689 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:43:10.690 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:43:10.690 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:43:10.690 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:43:10.690 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:43:10.690 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:43:10.691 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:43:10.691 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:43:10.691 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:43:10.691 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:43:10.691 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:43:10.692 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:43:10.692 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:43:10.692 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:43:10.692 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:43:10.692 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:43:10.692 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:43:10.692 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:43:10.692 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:43:10.692 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:43:10.692 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:43:10.692 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:43:10.692 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:43:10.692 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:43:15.060 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:43:15.061 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:43:15.062 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:43:15.063 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:43:15.063 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:43:15.063 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:43:15.063 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:43:15.063 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:43:15.063 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:43:15.063 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:43:15.063 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:43:15.063 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:43:15.063 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:43:15.063 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:43:15.063 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:43:15.063 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 10
+2026-03-24 16:43:34.245 [Test worker] DEBUG Operations.DefineParameters - Define a -> 10
+2026-03-24 16:43:34.246 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:43:38.035 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:43:38.035 [Test worker] DEBUG Calculate - Обработка операции: PUSH 10
+2026-03-24 16:43:45.023 [Test worker] DEBUG Operations.Push - Положил на стек: 10
+2026-03-24 16:43:45.024 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:43:46.674 [Test worker] DEBUG Operations.Div - 10.0 / 2.0
+2026-03-24 16:43:46.674 [Test worker] DEBUG Operations.Div - Result: 5.0
+2026-03-24 16:43:46.674 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:43:48.947 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:43:48.948 [Test worker] DEBUG Calculate - Обработка операции: -
+2026-03-24 16:43:49.852 [Test worker] DEBUG Operations.DefineParameters - 5.0 - 1.0
+2026-03-24 16:43:49.852 [Test worker] DEBUG Operations.DefineParameters - Result: -4.0
+2026-03-24 16:43:49.853 [Test worker] DEBUG Calculate - Обработка операции: PUSH -3
+2026-03-24 16:43:51.951 [Test worker] DEBUG Operations.Push - Положил на стек: -3
+2026-03-24 16:43:51.951 [Test worker] DEBUG Calculate - Обработка операции: *
+2026-03-24 16:44:04.178 [Test worker] ERROR Operations.Mult - недостаточно элементов на стеке
+2026-03-24 16:44:04.182 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:44:10.558 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:44:10.561 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:44:10.561 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:44:10.561 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:44:10.561 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:44:10.562 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:44:10.563 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:44:10.563 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:44:10.563 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:44:10.563 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:44:10.564 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:44:10.564 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:44:10.567 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:44:10.568 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:44:10.568 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:44:10.568 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:44:10.568 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:44:10.569 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:44:10.569 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:44:10.569 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:44:10.569 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:44:18.123 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:44:18.126 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:44:18.126 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:44:18.126 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:44:18.127 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:44:18.128 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:44:18.129 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:44:18.129 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:44:18.129 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:44:18.129 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:44:18.129 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:44:18.129 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:44:18.130 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:44:18.130 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:44:18.130 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:44:18.131 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:44:18.131 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:44:18.132 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:44:18.132 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:44:18.132 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:44:18.132 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:44:18.133 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:44:18.133 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:44:18.134 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:44:18.134 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 10
+2026-03-24 16:44:18.134 [Test worker] DEBUG Operations.DefineParameters - Define a -> 10
+2026-03-24 16:44:18.134 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:44:18.135 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:44:18.135 [Test worker] DEBUG Calculate - Обработка операции: PUSH 10
+2026-03-24 16:44:18.135 [Test worker] DEBUG Operations.Push - Положил на стек: 10
+2026-03-24 16:44:18.135 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:44:18.135 [Test worker] DEBUG Operations.Div - 10.0 / 2.0
+2026-03-24 16:44:18.135 [Test worker] DEBUG Operations.Div - Result: 5.0
+2026-03-24 16:44:18.135 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:44:18.136 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:44:18.136 [Test worker] DEBUG Calculate - Обработка операции: -
+2026-03-24 16:44:18.136 [Test worker] DEBUG Operations.DefineParameters - 5.0 - 1.0
+2026-03-24 16:44:18.136 [Test worker] DEBUG Operations.DefineParameters - Result: -4.0
+2026-03-24 16:44:18.136 [Test worker] DEBUG Calculate - Обработка операции: PUSH 3
+2026-03-24 16:44:18.136 [Test worker] DEBUG Operations.Push - Положил на стек: 3
+2026-03-24 16:44:18.136 [Test worker] DEBUG Calculate - Обработка операции: *
+2026-03-24 16:44:18.136 [Test worker] DEBUG Operations.Mult - -4.0 * 3.0
+2026-03-24 16:44:18.137 [Test worker] DEBUG Operations.Mult - Result: -12.0
+2026-03-24 16:44:18.137 [Test worker] DEBUG Calculate - Обработка операции: PUSH 4
+2026-03-24 16:44:18.137 [Test worker] DEBUG Operations.Push - Положил на стек: 4
+2026-03-24 16:44:18.137 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:44:18.137 [Test worker] DEBUG Operations.Plus - -12.0 + 4.0
+2026-03-24 16:44:18.137 [Test worker] DEBUG Operations.Plus - Result: -8.0
+2026-03-24 16:44:18.137 [Test worker] DEBUG Calculate - Обработка операции: SQRT
+2026-03-24 16:44:18.137 [Test worker] DEBUG Operations.Sqrt - Корень из -8.0
+2026-03-24 16:44:18.138 [Test worker] DEBUG Operations.Sqrt - Result: NaN
+2026-03-24 16:44:18.138 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:44:18.138 [Test worker] DEBUG Operations.Plus - Вывел: NaN
+2026-03-24 16:44:18.138 [Test worker] DEBUG Calculate - Обработка операции: POP
+2026-03-24 16:44:18.138 [Test worker] DEBUG Operations.Pop - Снят: NaN
+2026-03-24 16:44:18.138 [Test worker] DEBUG Calculate - Обработка операции: # comment
+2026-03-24 16:44:18.138 [Test worker] DEBUG Calculate - Обработка операции: 
+2026-03-24 16:44:18.139 [Test worker] ERROR Calculate - Операция не найдена
+2026-03-24 16:44:18.144 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:44:19.185 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:44:19.188 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:44:19.188 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:44:19.188 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:44:19.188 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:44:19.189 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:44:19.189 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:44:19.190 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:44:19.190 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:44:19.190 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:44:19.190 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:44:19.190 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:44:19.190 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:44:19.191 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:44:19.191 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:44:19.191 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:44:19.191 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:44:19.191 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:44:19.191 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:44:19.191 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:44:19.192 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:44:19.192 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:44:19.192 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:44:19.192 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:44:19.192 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:44:19.192 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:44:19.192 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:44:19.192 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:44:19.192 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:44:19.192 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:44:26.522 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:44:26.523 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:44:26.523 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:44:26.523 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:44:26.524 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:44:26.524 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:44:26.524 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:44:26.524 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:44:26.525 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:44:26.525 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:44:26.525 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:44:26.525 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:44:26.525 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:44:26.525 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:44:26.526 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:44:26.526 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 10
+2026-03-24 16:44:27.521 [Test worker] DEBUG Operations.DefineParameters - Define a -> 10
+2026-03-24 16:44:27.521 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:44:28.144 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:44:28.144 [Test worker] DEBUG Calculate - Обработка операции: PUSH 10
+2026-03-24 16:44:28.797 [Test worker] DEBUG Operations.Push - Положил на стек: 10
+2026-03-24 16:44:28.797 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:44:29.683 [Test worker] DEBUG Operations.Div - 10.0 / 2.0
+2026-03-24 16:44:29.683 [Test worker] DEBUG Operations.Div - Result: 5.0
+2026-03-24 16:44:29.684 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:44:32.371 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:44:32.371 [Test worker] DEBUG Calculate - Обработка операции: -
+2026-03-24 16:44:34.145 [Test worker] DEBUG Operations.DefineParameters - 5.0 - 1.0
+2026-03-24 16:44:34.145 [Test worker] DEBUG Operations.DefineParameters - Result: -4.0
+2026-03-24 16:44:34.146 [Test worker] DEBUG Calculate - Обработка операции: PUSH 3
+2026-03-24 16:44:38.401 [Test worker] DEBUG Operations.Push - Положил на стек: 3
+2026-03-24 16:44:38.402 [Test worker] DEBUG Calculate - Обработка операции: *
+2026-03-24 16:45:39.067 [Test worker] DEBUG Operations.Mult - -4.0 * 3.0
+2026-03-24 16:45:39.068 [Test worker] DEBUG Operations.Mult - Result: -12.0
+2026-03-24 16:45:39.071 [Test worker] DEBUG Calculate - Обработка операции: PUSH 4
+2026-03-24 16:45:39.071 [Test worker] DEBUG Operations.Push - Положил на стек: 4
+2026-03-24 16:45:39.072 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:45:39.074 [Test worker] DEBUG Operations.Plus - -12.0 + 4.0
+2026-03-24 16:45:39.074 [Test worker] DEBUG Operations.Plus - Result: -8.0
+2026-03-24 16:45:39.075 [Test worker] DEBUG Calculate - Обработка операции: SQRT
+2026-03-24 16:45:39.075 [Test worker] DEBUG Operations.Sqrt - Корень из -8.0
+2026-03-24 16:45:39.076 [Test worker] DEBUG Operations.Sqrt - Result: NaN
+2026-03-24 16:45:39.076 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:45:39.077 [Test worker] DEBUG Operations.Plus - Вывел: NaN
+2026-03-24 16:45:39.077 [Test worker] DEBUG Calculate - Обработка операции: POP
+2026-03-24 16:45:39.077 [Test worker] DEBUG Operations.Pop - Снят: NaN
+2026-03-24 16:45:39.078 [Test worker] DEBUG Calculate - Обработка операции: # comment
+2026-03-24 16:45:39.078 [Test worker] DEBUG Calculate - Обработка операции: 
+2026-03-24 16:45:39.078 [Test worker] ERROR Calculate - Операция не найдена
+2026-03-24 16:45:39.084 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:45:40.165 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:45:40.167 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:45:40.168 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:45:40.168 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:45:40.168 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:45:40.168 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:45:40.169 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:45:40.169 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:45:40.170 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:45:40.170 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:45:40.170 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:45:40.170 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:45:40.170 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:45:40.171 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:45:40.171 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:45:40.171 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:45:40.171 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:45:40.171 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:45:40.171 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:45:40.172 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:45:40.172 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:45:40.172 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:45:40.172 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:45:40.172 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:45:40.172 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:45:40.172 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:45:40.172 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:45:40.172 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:45:40.172 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:45:40.172 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:45:43.541 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:45:43.541 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:45:43.541 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:45:43.541 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:45:43.542 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:45:43.542 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:45:43.542 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:45:43.542 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:45:43.542 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:45:43.543 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:45:43.543 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:45:43.543 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:45:43.543 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:45:43.543 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:45:43.543 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:45:43.543 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 10
+2026-03-24 16:45:44.841 [Test worker] DEBUG Operations.DefineParameters - Define a -> 10
+2026-03-24 16:45:44.842 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:45:47.947 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:45:47.948 [Test worker] DEBUG Calculate - Обработка операции: PUSH 10
+2026-03-24 16:45:47.949 [Test worker] DEBUG Operations.Push - Положил на стек: 10
+2026-03-24 16:45:47.949 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:45:47.949 [Test worker] DEBUG Operations.Div - 10.0 / 2.0
+2026-03-24 16:45:47.949 [Test worker] DEBUG Operations.Div - Result: 5.0
+2026-03-24 16:45:47.949 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:45:47.950 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:45:47.950 [Test worker] DEBUG Calculate - Обработка операции: -
+2026-03-24 16:45:47.950 [Test worker] DEBUG Operations.DefineParameters - 5.0 - 1.0
+2026-03-24 16:45:47.950 [Test worker] DEBUG Operations.DefineParameters - Result: -4.0
+2026-03-24 16:45:47.950 [Test worker] DEBUG Calculate - Обработка операции: PUSH 3
+2026-03-24 16:45:47.950 [Test worker] DEBUG Operations.Push - Положил на стек: 3
+2026-03-24 16:45:47.950 [Test worker] DEBUG Calculate - Обработка операции: *
+2026-03-24 16:45:47.950 [Test worker] DEBUG Operations.Mult - -4.0 * 3.0
+2026-03-24 16:45:47.950 [Test worker] DEBUG Operations.Mult - Result: -12.0
+2026-03-24 16:45:47.950 [Test worker] DEBUG Calculate - Обработка операции: PUSH 4
+2026-03-24 16:45:47.950 [Test worker] DEBUG Operations.Push - Положил на стек: 4
+2026-03-24 16:45:47.950 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:45:47.950 [Test worker] DEBUG Operations.Plus - -12.0 + 4.0
+2026-03-24 16:45:47.950 [Test worker] DEBUG Operations.Plus - Result: -8.0
+2026-03-24 16:45:47.950 [Test worker] DEBUG Calculate - Обработка операции: SQRT
+2026-03-24 16:45:47.950 [Test worker] DEBUG Operations.Sqrt - Корень из -8.0
+2026-03-24 16:45:47.950 [Test worker] DEBUG Operations.Sqrt - Result: NaN
+2026-03-24 16:45:47.950 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:45:47.950 [Test worker] DEBUG Operations.Plus - Вывел: NaN
+2026-03-24 16:45:47.950 [Test worker] DEBUG Calculate - Обработка операции: POP
+2026-03-24 16:45:47.950 [Test worker] DEBUG Operations.Pop - Снят: NaN
+2026-03-24 16:45:47.950 [Test worker] DEBUG Calculate - Обработка операции: # comment
+2026-03-24 16:45:47.950 [Test worker] DEBUG Calculate - Обработка операции: 
+2026-03-24 16:45:47.950 [Test worker] ERROR Calculate - Операция не найдена
+2026-03-24 16:45:47.957 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:45:58.030 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:45:58.033 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:45:58.033 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:45:58.033 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:45:58.033 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:45:58.034 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:45:58.035 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:45:58.035 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:45:58.036 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:45:58.036 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:45:58.036 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:45:58.036 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:45:58.036 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:45:58.037 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:45:58.037 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:45:58.037 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:45:58.037 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:46:00.482 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:46:00.482 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:46:00.482 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:46:00.482 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:46:00.482 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:46:00.482 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:46:00.482 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:46:00.482 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:46:00.482 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:46:00.483 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:46:00.483 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:46:00.483 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:46:00.483 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:46:05.048 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:46:05.049 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:46:05.049 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:46:05.049 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:46:05.049 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:46:05.049 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:46:05.049 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:46:05.049 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:46:05.050 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:46:05.050 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:46:05.050 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:46:05.050 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:46:05.050 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:46:05.051 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:46:05.051 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:46:05.051 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 10
+2026-03-24 16:46:05.925 [Test worker] DEBUG Operations.DefineParameters - Define a -> 10
+2026-03-24 16:46:05.925 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:46:06.592 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:46:06.593 [Test worker] DEBUG Calculate - Обработка операции: PUSH 10
+2026-03-24 16:46:08.146 [Test worker] DEBUG Operations.Push - Положил на стек: 10
+2026-03-24 16:46:08.147 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:46:09.054 [Test worker] DEBUG Operations.Div - 10.0 / 2.0
+2026-03-24 16:46:09.054 [Test worker] DEBUG Operations.Div - Result: 5.0
+2026-03-24 16:46:09.054 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:46:09.961 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:46:09.962 [Test worker] DEBUG Calculate - Обработка операции: -
+2026-03-24 16:46:10.879 [Test worker] DEBUG Operations.DefineParameters - 5.0 - 1.0
+2026-03-24 16:46:10.879 [Test worker] DEBUG Operations.DefineParameters - Result: -4.0
+2026-03-24 16:46:10.880 [Test worker] DEBUG Calculate - Обработка операции: PUSH -3
+2026-03-24 16:48:15.685 [Test worker] DEBUG Operations.Push - Положил на стек: -3
+2026-03-24 16:48:15.686 [Test worker] DEBUG Calculate - Обработка операции: *
+2026-03-24 16:48:15.686 [Test worker] ERROR Operations.Mult - недостаточно элементов на стеке
+2026-03-24 16:48:15.689 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:48:28.378 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:48:28.380 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:48:28.381 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:48:28.381 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:48:28.381 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:48:28.381 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:48:28.382 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:48:28.382 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:48:28.382 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:48:28.382 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:48:28.382 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:48:28.382 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:48:28.383 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:48:28.383 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:48:28.383 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:48:28.383 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:48:28.383 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:48:28.383 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:48:28.383 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:48:28.383 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:48:28.383 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:48:28.384 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:48:28.384 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:48:28.384 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:48:28.384 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:48:28.384 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:48:28.384 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:48:28.384 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:48:28.384 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:48:28.384 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:48:28.384 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:48:28.384 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:48:28.384 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:48:28.384 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:48:28.384 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:48:28.384 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:48:28.384 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:48:28.384 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:48:28.384 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:48:28.384 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:48:28.384 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:48:28.384 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:48:28.384 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:48:28.384 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:48:28.385 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:48:28.385 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 10
+2026-03-24 16:48:28.385 [Test worker] DEBUG Operations.DefineParameters - Define a -> 10
+2026-03-24 16:48:28.385 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:48:28.385 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:48:28.385 [Test worker] DEBUG Calculate - Обработка операции: PUSH 10
+2026-03-24 16:48:28.385 [Test worker] DEBUG Operations.Push - Положил на стек: 10
+2026-03-24 16:48:28.385 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:48:28.385 [Test worker] DEBUG Operations.Div - 10.0 / 2.0
+2026-03-24 16:48:28.385 [Test worker] DEBUG Operations.Div - Result: 5.0
+2026-03-24 16:48:28.385 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:48:28.385 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:48:28.385 [Test worker] DEBUG Calculate - Обработка операции: -
+2026-03-24 16:48:28.385 [Test worker] DEBUG Operations.DefineParameters - 5.0 - 1.0
+2026-03-24 16:48:28.385 [Test worker] DEBUG Operations.DefineParameters - Result: -4.0
+2026-03-24 16:48:28.385 [Test worker] DEBUG Calculate - Обработка операции: PUSH -3
+2026-03-24 16:48:28.385 [Test worker] DEBUG Operations.Push - Положил на стек: -3
+2026-03-24 16:48:28.385 [Test worker] DEBUG Calculate - Обработка операции: *
+2026-03-24 16:48:28.385 [Test worker] DEBUG Operations.Mult - -4.0 * -3.0
+2026-03-24 16:48:28.385 [Test worker] DEBUG Operations.Mult - Result: 12.0
+2026-03-24 16:48:28.385 [Test worker] DEBUG Calculate - Обработка операции: PUSH 4
+2026-03-24 16:48:28.385 [Test worker] DEBUG Operations.Push - Положил на стек: 4
+2026-03-24 16:48:28.385 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:48:28.385 [Test worker] DEBUG Operations.Plus - 12.0 + 4.0
+2026-03-24 16:48:28.385 [Test worker] DEBUG Operations.Plus - Result: 16.0
+2026-03-24 16:48:28.385 [Test worker] DEBUG Calculate - Обработка операции: SQRT
+2026-03-24 16:48:28.385 [Test worker] DEBUG Operations.Sqrt - Корень из 16.0
+2026-03-24 16:48:28.385 [Test worker] DEBUG Operations.Sqrt - Result: 4.0
+2026-03-24 16:48:28.385 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:48:28.386 [Test worker] DEBUG Operations.Plus - Вывел: 4.0
+2026-03-24 16:48:28.386 [Test worker] DEBUG Calculate - Обработка операции: POP
+2026-03-24 16:48:28.386 [Test worker] DEBUG Operations.Pop - Снят: 4.0
+2026-03-24 16:48:28.386 [Test worker] DEBUG Calculate - Обработка операции: # comment
+2026-03-24 16:48:28.386 [Test worker] DEBUG Calculate - Обработка операции: 
+2026-03-24 16:48:28.386 [Test worker] ERROR Calculate - Операция не найдена
+2026-03-24 16:48:28.387 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:48:45.594 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:48:45.598 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:48:45.599 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:48:45.599 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:48:45.599 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:48:45.599 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:48:45.600 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:48:45.601 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:48:45.601 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:48:45.601 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:48:45.601 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:48:45.601 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:48:45.601 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:48:45.602 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:48:45.602 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:48:45.602 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:48:45.602 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:48:45.603 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:48:45.603 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:48:45.603 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:48:45.603 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:48:45.604 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:48:45.604 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:48:45.604 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:48:45.604 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:48:45.604 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:48:45.604 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:48:45.604 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:48:45.604 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:48:45.604 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:49:04.210 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:49:04.211 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:49:04.211 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:49:04.212 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:49:04.212 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:49:04.213 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:49:04.213 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:49:04.214 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:49:04.214 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:49:04.214 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:49:04.214 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:49:04.214 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:49:04.214 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:49:04.214 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:49:04.214 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:49:05.881 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 10
+2026-03-24 16:49:06.897 [Test worker] DEBUG Operations.DefineParameters - Define a -> 10
+2026-03-24 16:49:11.258 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:49:11.259 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:49:11.976 [Test worker] DEBUG Calculate - Обработка операции: PUSH 10
+2026-03-24 16:49:11.977 [Test worker] DEBUG Operations.Push - Положил на стек: 10
+2026-03-24 16:49:13.075 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:49:13.076 [Test worker] DEBUG Operations.Div - 10.0 / 2.0
+2026-03-24 16:49:13.076 [Test worker] DEBUG Operations.Div - Result: 5.0
+2026-03-24 16:49:14.003 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:49:14.004 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:49:15.397 [Test worker] DEBUG Calculate - Обработка операции: -
+2026-03-24 16:49:15.398 [Test worker] DEBUG Operations.DefineParameters - 5.0 - 1.0
+2026-03-24 16:49:15.398 [Test worker] DEBUG Operations.DefineParameters - Result: -4.0
+2026-03-24 16:49:16.330 [Test worker] DEBUG Calculate - Обработка операции: PUSH -3
+2026-03-24 16:49:16.331 [Test worker] DEBUG Operations.Push - Положил на стек: -3
+2026-03-24 16:49:17.277 [Test worker] DEBUG Calculate - Обработка операции: *
+2026-03-24 16:49:17.278 [Test worker] DEBUG Operations.Mult - -4.0 * -3.0
+2026-03-24 16:49:17.278 [Test worker] DEBUG Operations.Mult - Result: 12.0
+2026-03-24 16:49:18.513 [Test worker] DEBUG Calculate - Обработка операции: PUSH 4
+2026-03-24 16:49:18.513 [Test worker] DEBUG Operations.Push - Положил на стек: 4
+2026-03-24 16:49:19.426 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:49:19.427 [Test worker] DEBUG Operations.Plus - 12.0 + 4.0
+2026-03-24 16:49:19.427 [Test worker] DEBUG Operations.Plus - Result: 16.0
+2026-03-24 16:49:20.204 [Test worker] DEBUG Calculate - Обработка операции: SQRT
+2026-03-24 16:49:20.204 [Test worker] DEBUG Operations.Sqrt - Корень из 16.0
+2026-03-24 16:49:20.204 [Test worker] DEBUG Operations.Sqrt - Result: 4.0
+2026-03-24 16:49:22.482 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:49:22.482 [Test worker] DEBUG Operations.Plus - Вывел: 4.0
+2026-03-24 16:49:24.233 [Test worker] DEBUG Calculate - Обработка операции: POP
+2026-03-24 16:49:24.233 [Test worker] DEBUG Operations.Pop - Снят: 4.0
+2026-03-24 16:49:25.892 [Test worker] DEBUG Calculate - Обработка операции: # comment
+2026-03-24 16:49:32.817 [Test worker] DEBUG Calculate - Обработка операции: 
+2026-03-24 16:49:32.818 [Test worker] ERROR Calculate - Операция не найдена
+2026-03-24 16:49:32.823 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:49:34.117 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:49:34.119 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:49:34.120 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:49:34.120 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:49:34.120 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:49:34.120 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:49:34.121 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:49:34.121 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:49:34.121 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:49:34.122 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:49:34.122 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:49:34.122 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:49:34.122 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:49:34.122 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:49:34.122 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:49:34.122 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:49:34.123 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:49:34.123 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:49:34.123 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:49:34.123 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:49:34.123 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:49:34.123 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:49:34.123 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:49:34.123 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:49:34.123 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:49:34.123 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:49:34.123 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:49:34.123 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:49:34.123 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:49:34.124 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:49:34.124 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:49:34.124 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:49:34.124 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:49:34.124 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:49:34.124 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:49:34.124 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:49:34.124 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:49:34.124 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:49:34.124 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:49:34.124 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:49:34.124 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:49:34.124 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:49:34.124 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:49:34.124 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:49:34.124 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:49:34.124 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 10
+2026-03-24 16:49:34.124 [Test worker] DEBUG Operations.DefineParameters - Define a -> 10
+2026-03-24 16:49:34.124 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:49:34.124 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:49:34.124 [Test worker] DEBUG Calculate - Обработка операции: PUSH 10
+2026-03-24 16:49:34.124 [Test worker] DEBUG Operations.Push - Положил на стек: 10
+2026-03-24 16:49:34.124 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:49:34.124 [Test worker] DEBUG Operations.Div - 10.0 / 2.0
+2026-03-24 16:49:34.125 [Test worker] DEBUG Operations.Div - Result: 5.0
+2026-03-24 16:49:34.125 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:49:34.125 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:49:34.125 [Test worker] DEBUG Calculate - Обработка операции: -
+2026-03-24 16:49:34.125 [Test worker] DEBUG Operations.DefineParameters - 5.0 - 1.0
+2026-03-24 16:49:34.125 [Test worker] DEBUG Operations.DefineParameters - Result: -4.0
+2026-03-24 16:49:34.125 [Test worker] DEBUG Calculate - Обработка операции: PUSH -3
+2026-03-24 16:49:34.125 [Test worker] DEBUG Operations.Push - Положил на стек: -3
+2026-03-24 16:49:34.125 [Test worker] DEBUG Calculate - Обработка операции: *
+2026-03-24 16:49:34.125 [Test worker] DEBUG Operations.Mult - -4.0 * -3.0
+2026-03-24 16:49:34.125 [Test worker] DEBUG Operations.Mult - Result: 12.0
+2026-03-24 16:49:34.125 [Test worker] DEBUG Calculate - Обработка операции: PUSH 4
+2026-03-24 16:49:34.125 [Test worker] DEBUG Operations.Push - Положил на стек: 4
+2026-03-24 16:49:34.125 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:49:34.125 [Test worker] DEBUG Operations.Plus - 12.0 + 4.0
+2026-03-24 16:49:34.125 [Test worker] DEBUG Operations.Plus - Result: 16.0
+2026-03-24 16:49:34.125 [Test worker] DEBUG Calculate - Обработка операции: SQRT
+2026-03-24 16:49:34.125 [Test worker] DEBUG Operations.Sqrt - Корень из 16.0
+2026-03-24 16:49:34.125 [Test worker] DEBUG Operations.Sqrt - Result: 4.0
+2026-03-24 16:49:34.125 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:49:34.125 [Test worker] DEBUG Operations.Plus - Вывел: 4.0
+2026-03-24 16:49:34.125 [Test worker] DEBUG Calculate - Обработка операции: POP
+2026-03-24 16:49:34.125 [Test worker] DEBUG Operations.Pop - Снят: 4.0
+2026-03-24 16:49:34.125 [Test worker] DEBUG Calculate - Обработка операции: # comment
+2026-03-24 16:49:34.126 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:49:51.636 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:49:51.638 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:49:51.638 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:49:51.638 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:49:51.638 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:49:51.639 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:49:51.639 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:49:51.639 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:49:51.640 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:49:51.640 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:49:51.640 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:49:51.640 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:49:51.640 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:49:51.640 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:49:51.640 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:49:51.640 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:49:51.640 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 1
+2026-03-24 16:49:51.641 [Test worker] DEBUG Operations.DefineParameters - Define a -> 1
+2026-03-24 16:49:51.641 [Test worker] DEBUG Calculate - Обработка операции: DEFINE b 2
+2026-03-24 16:49:51.641 [Test worker] DEBUG Operations.DefineParameters - Define b -> 2
+2026-03-24 16:49:51.641 [Test worker] DEBUG Calculate - Обработка операции: PUSH a
+2026-03-24 16:49:51.641 [Test worker] DEBUG Operations.Push - Положил на стек: a
+2026-03-24 16:49:51.641 [Test worker] DEBUG Calculate - Обработка операции: PUSH b
+2026-03-24 16:49:51.641 [Test worker] DEBUG Operations.Push - Положил на стек: b
+2026-03-24 16:49:51.641 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:49:51.641 [Test worker] DEBUG Operations.Plus - 1.0 + 2.0
+2026-03-24 16:49:51.641 [Test worker] DEBUG Operations.Plus - Result: 3.0
+2026-03-24 16:49:51.641 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:49:51.641 [Test worker] DEBUG Operations.Plus - Вывел: 3.0
+2026-03-24 16:49:51.641 [Test worker] INFO  Calculate - Закрытие ресурсов
+2026-03-24 16:49:51.641 [Test worker] INFO  Calculate - Открытите файла с выражениями..
+2026-03-24 16:49:51.641 [Test worker] INFO  Operations.InitOperations - Начало работы с конфигом
+2026-03-24 16:49:51.642 [Test worker] INFO  Operations.InitOperations - Чтение конфига...
+2026-03-24 16:49:51.642 [Test worker] INFO  Operations.InitOperations - Попытка открыть конфиг..
+2026-03-24 16:49:51.642 [Test worker] INFO  Operations.InitOperations - Прочитан: DEFINE
+2026-03-24 16:49:51.642 [Test worker] INFO  Operations.InitOperations - Прочитан: /
+2026-03-24 16:49:51.642 [Test worker] INFO  Operations.InitOperations - Прочитан: -
+2026-03-24 16:49:51.642 [Test worker] INFO  Operations.InitOperations - Прочитан: *
+2026-03-24 16:49:51.642 [Test worker] INFO  Operations.InitOperations - Прочитан: +
+2026-03-24 16:49:51.642 [Test worker] INFO  Operations.InitOperations - Прочитан: POP
+2026-03-24 16:49:51.642 [Test worker] INFO  Operations.InitOperations - Прочитан: PRINT
+2026-03-24 16:49:51.642 [Test worker] INFO  Operations.InitOperations - Прочитан: PUSH
+2026-03-24 16:49:51.642 [Test worker] INFO  Operations.InitOperations - Прочитан: #
+2026-03-24 16:49:51.642 [Test worker] INFO  Operations.InitOperations - Прочитан: SQRT
+2026-03-24 16:49:51.642 [Test worker] INFO  Calculate - начало вычислений...
+2026-03-24 16:49:51.642 [Test worker] DEBUG Calculate - Обработка операции: DEFINE a 10
+2026-03-24 16:49:51.642 [Test worker] DEBUG Operations.DefineParameters - Define a -> 10
+2026-03-24 16:49:51.642 [Test worker] DEBUG Calculate - Обработка операции: PUSH 2
+2026-03-24 16:49:51.642 [Test worker] DEBUG Operations.Push - Положил на стек: 2
+2026-03-24 16:49:51.642 [Test worker] DEBUG Calculate - Обработка операции: PUSH 10
+2026-03-24 16:49:51.642 [Test worker] DEBUG Operations.Push - Положил на стек: 10
+2026-03-24 16:49:51.642 [Test worker] DEBUG Calculate - Обработка операции: /
+2026-03-24 16:49:51.642 [Test worker] DEBUG Operations.Div - 10.0 / 2.0
+2026-03-24 16:49:51.642 [Test worker] DEBUG Operations.Div - Result: 5.0
+2026-03-24 16:49:51.642 [Test worker] DEBUG Calculate - Обработка операции: PUSH 1
+2026-03-24 16:49:51.642 [Test worker] DEBUG Operations.Push - Положил на стек: 1
+2026-03-24 16:49:51.643 [Test worker] DEBUG Calculate - Обработка операции: -
+2026-03-24 16:49:51.643 [Test worker] DEBUG Operations.DefineParameters - 5.0 - 1.0
+2026-03-24 16:49:51.643 [Test worker] DEBUG Operations.DefineParameters - Result: -4.0
+2026-03-24 16:49:51.643 [Test worker] DEBUG Calculate - Обработка операции: PUSH -3
+2026-03-24 16:49:51.643 [Test worker] DEBUG Operations.Push - Положил на стек: -3
+2026-03-24 16:49:51.643 [Test worker] DEBUG Calculate - Обработка операции: *
+2026-03-24 16:49:51.643 [Test worker] DEBUG Operations.Mult - -4.0 * -3.0
+2026-03-24 16:49:51.643 [Test worker] DEBUG Operations.Mult - Result: 12.0
+2026-03-24 16:49:51.643 [Test worker] DEBUG Calculate - Обработка операции: PUSH 4
+2026-03-24 16:49:51.643 [Test worker] DEBUG Operations.Push - Положил на стек: 4
+2026-03-24 16:49:51.643 [Test worker] DEBUG Calculate - Обработка операции: +
+2026-03-24 16:49:51.643 [Test worker] DEBUG Operations.Plus - 12.0 + 4.0
+2026-03-24 16:49:51.643 [Test worker] DEBUG Operations.Plus - Result: 16.0
+2026-03-24 16:49:51.643 [Test worker] DEBUG Calculate - Обработка операции: SQRT
+2026-03-24 16:49:51.643 [Test worker] DEBUG Operations.Sqrt - Корень из 16.0
+2026-03-24 16:49:51.643 [Test worker] DEBUG Operations.Sqrt - Result: 4.0
+2026-03-24 16:49:51.643 [Test worker] DEBUG Calculate - Обработка операции: PRINT
+2026-03-24 16:49:51.643 [Test worker] DEBUG Operations.Plus - Вывел: 4.0
+2026-03-24 16:49:51.643 [Test worker] DEBUG Calculate - Обработка операции: POP
+2026-03-24 16:49:51.643 [Test worker] DEBUG Operations.Pop - Снят: 4.0
+2026-03-24 16:49:51.643 [Test worker] DEBUG Calculate - Обработка операции: # comment
+2026-03-24 16:49:51.643 [Test worker] INFO  Calculate - Закрытие ресурсов

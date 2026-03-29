@@ -44,3 +44,7 @@ cmake-build-debug-coverage
 .idea/
 gtest/
 lab1/
+.gradle/
+build/
+*.class
+*.log

@@ -1,0 +1,14 @@
+DEFINE a 10
+PUSH 2
+PUSH 10
+/
+PUSH 1
+-
+PUSH -3
+*
+PUSH 4
++
+SQRT
+PRINT
+POP
+# comment

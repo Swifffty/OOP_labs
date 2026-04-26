@@ -1,0 +1,10 @@
+DEFINE Operations.DefineParameters
+/ Operations.Div
+- Operations.Minus
+* Operations.Mult
++ Operations.Plus
+POP Operations.Pop
+PRINT Operations.Print
+PUSH Operations.Push
+# Operations.Sharp
+SQRT Operations.Sqrt

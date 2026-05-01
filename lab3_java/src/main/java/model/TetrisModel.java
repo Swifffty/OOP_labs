@@ -11,9 +11,9 @@ package model;
 
 import model.figure.IFigure;
 import model.figure.Square;
-import view.GameStage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import view.GameStageI;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -25,7 +25,7 @@ public class TetrisModel {
     private static final Logger log = LoggerFactory.getLogger(TetrisModel.class);
     private final int countRows = 22;
     private final int countCol = 12;
-    private GameStage stage;
+    public final GameStageI stage;
     private Map<Integer, IFigure> shapes;
     private int[][] gameFiled = new int[22][12];
     private int[] currentPos = new int[2];
@@ -133,13 +133,13 @@ public class TetrisModel {
         }
     }
 
-    public TetrisModel() {
+    public TetrisModel(GameStageI stage) {
         log.info("Инициализация модели TetrisModel");
         score = 0;
         shapes = new HashMap<>();
         GetShapes();
         refreshShape();
-        stage = new GameStage();
+        this.stage = stage;
         NewShape();
         stage.getChange(copyGameFiled(), currentColor);
     }

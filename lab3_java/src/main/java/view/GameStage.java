@@ -1,6 +1,7 @@
 package view;
 
 import controller.ActionController;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -22,7 +23,7 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import java.net.URL;
 
-public class GameStage {
+public class GameStage implements GameStageI {
     private static final Logger log = LoggerFactory.getLogger(GameStage.class);
     private Stage stage;
     private Text scoreText;
@@ -131,6 +132,7 @@ public class GameStage {
 
         rootMenu = new VBox();
         rootMenu.getChildren().addAll(musicBtn, scorePane, nextShape);
+        VBox.setMargin(nextShape, new Insets(0, 0, 0, 30));
 
         root.getChildren().addAll(rootGame, rootMenu);
         stage = new Stage();

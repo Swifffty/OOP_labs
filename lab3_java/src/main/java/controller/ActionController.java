@@ -10,6 +10,7 @@ import model.TetrisModel;
 import javafx.scene.input.KeyEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import view.GameStage;
 import view.ScoreStage;
 
 public class ActionController {
@@ -22,7 +23,7 @@ public class ActionController {
         switch (button.getText()) {
             case "Start" -> {
                 log.info("Контроллер: Инициализация новой модели игры");
-                model = new TetrisModel();
+                model = new TetrisModel(new GameStage());
             }
             case "Table Score" -> {
                 log.info("Контроллер: Запрос данных таблицы рекордов");

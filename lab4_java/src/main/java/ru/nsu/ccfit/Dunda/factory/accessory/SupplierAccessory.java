@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 public class SupplierAccessory implements Runnable {
     public final StorageAccessory storage;
-    private final int speed;
+    private volatile int speed;
     private final Logger log = LogManager.getLogger(SupplierAccessory.class);
 
     public SupplierAccessory(StorageAccessory storage, int speed) {
@@ -15,13 +15,19 @@ public class SupplierAccessory implements Runnable {
 
     @Override
     public void run() {
-        while (true) {
+        log.info("начало поставки аксессуаров");
+        while (!Thread.currentThread().isInterrupted()) {
             try {
                 Thread.sleep(speed);
                 storage.supply(new Accessory());
             } catch (InterruptedException e) {
-                return;
+                Thread.currentThread().interrupt();
             }
         }
+        log.info("Конец поставки accessory");
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
     }
 }

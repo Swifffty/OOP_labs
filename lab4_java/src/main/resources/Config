@@ -1,0 +1,8 @@
+StorageBodySize=10
+StorageEngineSize=10
+StorageAccessorySize=10
+StorageAutoSize=10
+SupplierAccessory=3
+Workers=5
+Dealers=5
+LogSale=1

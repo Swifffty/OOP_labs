@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 
 public class SupplierBody implements Runnable {
     public final StorageBody storage;
-    private final int speed;
+    private volatile int speed;
     private final Logger log = LogManager.getLogger(SupplierBody.class);
 
     public SupplierBody(StorageBody storage, int speed) {
@@ -17,16 +17,19 @@ public class SupplierBody implements Runnable {
 
     @Override
     public void run() {
-        log.info("Run SupplierBody");
-        while (true) {
+        log.info("Начало поставки Body");
+        while (!Thread.currentThread().isInterrupted()) {
             try {
                 Thread.sleep(speed);
-                log.info("Отправка newBody on storage");
                 storage.supply(new Body());
             } catch (InterruptedException e) {
-                log.info("End SupplierBody");
-                return;
+                Thread.currentThread().interrupt();
             }
         }
+        log.info("Конец поставки SupplierBody");
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
     }
 }

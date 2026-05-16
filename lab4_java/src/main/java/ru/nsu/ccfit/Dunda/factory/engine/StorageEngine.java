@@ -1,28 +1,55 @@
 package ru.nsu.ccfit.Dunda.factory.engine;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import ru.nsu.ccfit.Dunda.factory.ControllerStorage;
+import ru.nsu.ccfit.Dunda.factory.body.SupplierBody;
+
 import java.util.ArrayDeque;
 import java.util.Queue;
 
 public class StorageEngine {
-    private final int capacity;
+    public final int capacity;
+    private final Logger log = LogManager.getLogger(StorageEngine.class);
     private final Queue<Engine> storage = new ArrayDeque<>();
-    public StorageEngine(int capacity) {
+    private final Object controllerObject;
+
+    public StorageEngine(int capacity, Object controllerObject) {
         this.capacity = capacity;
+        this.controllerObject = controllerObject;
     }
-    public synchronized void supply(Engine engine) throws InterruptedException {
-            if (storage.size() == capacity) {
+
+
+    public void supply(Engine engine) throws InterruptedException {
+        synchronized (this) {
+            while (storage.size() == capacity) {
+                log.info("Склад engine переполнен");
                 wait();
             }
             storage.add(engine);
+            log.info("Поступил новый engine на склад с id: " + engine.id);
             notifyAll();
+        }
+        synchronized (controllerObject) {
+            controllerObject.notifyAll();
+        }
     }
     public synchronized Engine getEngine() throws InterruptedException {
-            if (storage.isEmpty()) {
+            while (storage.isEmpty()) {
+                log.info("Склад engine пустой");
                 wait();
             }
             Engine engine = storage.remove();
-        notifyAll();
+            log.info("забрали engine с id: " + engine.id);
+            notifyAll();
             return engine;
+    }
 
+    public synchronized boolean isEmpty() {
+        return storage.isEmpty();
+    }
+
+    public synchronized int currentSize() {
+        return storage.size();
     }
 }

@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-
     id 'application'
     id 'org.openjfx.javafxplugin' version '0.1.0'
 }
@@ -18,7 +17,10 @@ dependencies {
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     implementation 'org.apache.logging.log4j:log4j-core:2.25.0'
     implementation 'org.apache.logging.log4j:log4j-api:2.25.0'
-    implementation 'org.apache.groovy:groovy-all:4.0.15'
+    implementation "org.openjfx:javafx-controls:21"
+    implementation "org.openjfx:javafx-fxml:21"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
 }
 
 javafx {
@@ -27,7 +29,7 @@ javafx {
 }
 
 application {
-    mainClass = 'src.main.java.Main'
+    mainClass = 'Main'
 }
 
 test {

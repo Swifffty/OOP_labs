@@ -1,0 +1,89 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+javafx {
+    version = '21'
+    modules = [
+            'javafx.controls',
+            'javafx.fxml'
+    ]
+}
+
+dependencies {
+    implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
+    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+application {
+    mainClass = 'serialisation.client.ChatApp'
+}
+
+tasks.register('runServer', JavaExec) {
+    group = 'application'
+    description = 'Run serialisation chat server'
+
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'serialisation.MainServer'
+
+    standardInput = System.in
+}
+
+tasks.register('runClient', JavaExec) {
+    group = 'application'
+    description = 'Run serialisation chat client'
+
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'serialisation.client.ChatApp'
+
+    jvmArgs = [
+            '--module-path', configurations.runtimeClasspath.asPath,
+            '--add-modules', 'javafx.controls,javafx.fxml'
+    ]
+}
+
+tasks.register('runXmlServer', JavaExec) {
+    group = 'application'
+    description = 'Run XML chat server'
+
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'xml.server.ChatServer'
+
+    standardInput = System.in
+}
+
+tasks.register('runXmlClient', JavaExec) {
+    group = 'application'
+    description = 'Run XML chat client'
+
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'xml.client.ChatApp'
+
+    jvmArgs = [
+            '--module-path', configurations.runtimeClasspath.asPath,
+            '--add-modules', 'javafx.controls,javafx.fxml'
+    ]
+}
+
+test {
+    useJUnitPlatform()
+}

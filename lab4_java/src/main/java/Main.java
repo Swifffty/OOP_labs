@@ -8,7 +8,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import ru.nsu.ccfit.Dunda.factory.ControllerStorage;
 import ru.nsu.ccfit.Dunda.factory.Dealer;
 import ru.nsu.ccfit.Dunda.factory.accessory.StorageAccessory;
 import ru.nsu.ccfit.Dunda.factory.accessory.SupplierAccessory;
@@ -74,12 +73,11 @@ public class Main extends Application {
         ConfigPars();
         log.info("Запуск интерфейса фабрики");
 
-        Object controllerObject = new Object(); // избавиться от контроллер обжект и пересмотреть контроллер сторедж
+        StorageAuto storageAuto = new StorageAuto(configMap.get("StorageAutoSize"), configMap.get("LogSale")); // избавиться от контроллер обжект и пересмотреть контроллер сторедж
 
-        StorageBody storageBody = new StorageBody(configMap.get("StorageBodySize"), controllerObject);
-        StorageEngine storageEngine = new StorageEngine(configMap.get("StorageEngineSize"), controllerObject);
-        StorageAccessory storageAccessory = new StorageAccessory(configMap.get("StorageAccessorySize"), controllerObject);
-        StorageAuto storageAuto = new StorageAuto(configMap.get("StorageAutoSize"), configMap.get("LogSale"));
+        StorageBody storageBody = new StorageBody(configMap.get("StorageBodySize"), storageAuto);
+        StorageEngine storageEngine = new StorageEngine(configMap.get("StorageEngineSize"), storageAuto);
+        StorageAccessory storageAccessory = new StorageAccessory(configMap.get("StorageAccessorySize"), storageAuto);
 
         SupplierBody bSup = new SupplierBody(storageBody, 1000);
         new Thread(bSup).start();
@@ -94,8 +92,9 @@ public class Main extends Application {
             new Thread(s).start();
         }
 
-        ControllerStorage controller = new ControllerStorage(storageAuto, storageBody, storageEngine, storageAccessory, configMap.get("Workers"));
-        controller.initStorage();
+
+        storageAuto.attachDependencies(storageBody, storageEngine, storageAccessory, configMap.get("Workers"));
+        storageAuto.initStorage();
 
         List<Dealer> dealers = new ArrayList<>();
         for (int i = 0; i < configMap.get("Dealers"); i++) {
@@ -108,7 +107,7 @@ public class Main extends Application {
         engineSlider.valueProperty().addListener((o, old, v) -> eSup.setSpeed(v.intValue()));
         accessorySlider.valueProperty().addListener((o, old, v) -> accSups.forEach(s -> s.setSpeed(v.intValue())));
         dealerSlider.valueProperty().addListener((o, old, v) -> dealers.forEach(d -> d.setSpeed(v.intValue())));
-        workerSlider.valueProperty().addListener((o, old, v) -> controller.setWorkerSpeed(v.intValue()));
+        workerSlider.valueProperty().addListener((o, old, v) -> storageAuto.setWorkerSpeed(v.intValue()));
 
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20));
@@ -126,7 +125,7 @@ public class Main extends Application {
                 workerSlider
         );
 
-        startUiUpdater(storageAuto, storageBody, storageEngine, storageAccessory, controller);
+        startUiUpdater(storageAuto, storageBody, storageEngine, storageAccessory);
 
         primaryStage.setTitle("Factory Emulator");
         primaryStage.setScene(new Scene(layout, 500, 800));
@@ -134,7 +133,7 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-    private void startUiUpdater(StorageAuto auto, StorageBody body, StorageEngine eng, StorageAccessory acc, ControllerStorage ctrl) {
+    private void startUiUpdater(StorageAuto auto, StorageBody body, StorageEngine eng, StorageAccessory acc) {
         Thread updater = new Thread(() -> {
             while (true) {
                 try {
@@ -150,7 +149,7 @@ public class Main extends Application {
                                 Body.getTotalCount(), Engine.getTotalCount(), Accessory.getTotalCount(), Auto.totalCount()
                         ));
 
-                        queueLabel.setText("Задач в очереди сборки: " + ctrl.getTasksInWait());
+                        queueLabel.setText("Задач в очереди сборки: " + auto.getTasksInWait());
                     });
                 } catch (InterruptedException e) { break; }
             }

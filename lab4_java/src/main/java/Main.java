@@ -74,7 +74,7 @@ public class Main extends Application {
         ConfigPars();
         log.info("Запуск интерфейса фабрики");
 
-        Object controllerObject = new Object();
+        Object controllerObject = new Object(); // избавиться от контроллер обжект и пересмотреть контроллер сторедж
 
         StorageBody storageBody = new StorageBody(configMap.get("StorageBodySize"), controllerObject);
         StorageEngine storageEngine = new StorageEngine(configMap.get("StorageEngineSize"), controllerObject);
@@ -94,7 +94,7 @@ public class Main extends Application {
             new Thread(s).start();
         }
 
-        ControllerStorage controller = new ControllerStorage(storageAuto, storageBody, storageEngine, storageAccessory, configMap.get("Workers"), controllerObject);
+        ControllerStorage controller = new ControllerStorage(storageAuto, storageBody, storageEngine, storageAccessory, configMap.get("Workers"));
         controller.initStorage();
 
         List<Dealer> dealers = new ArrayList<>();

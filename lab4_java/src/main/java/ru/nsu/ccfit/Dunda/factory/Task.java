@@ -14,8 +14,6 @@ public class Task implements Runnable {
     private final StorageEngine storageEngine;
     private final StorageAccessory storageAccessory;
     private final StorageAuto storageAuto;
-    private final ControllerStorage controllerStorage;
-    private final Object controllerObject;
     private static volatile int speed = 1000;
 
     public static void setSpeed(int newSpeed) {
@@ -25,27 +23,25 @@ public class Task implements Runnable {
     public Task(StorageBody storageBody,
                 StorageEngine storageEngine,
                 StorageAccessory storageAccessory,
-                StorageAuto storageAuto,
-                ControllerStorage controllerStorage,
-                Object controllerObject) {
+                StorageAuto storageAuto) {
 
         this.storageBody = storageBody;
         this.storageEngine = storageEngine;
         this.storageAccessory = storageAccessory;
         this.storageAuto = storageAuto;
-        this.controllerStorage = controllerStorage;
-        this.controllerObject = controllerObject;
     }
+
     @Override
-    public void run() { // сначала проверить место на складе
+    public void run() {
         try {
             Thread.sleep(speed);
             Body body;
             Engine engine;
             Accessory accessory;
-            synchronized (controllerObject) {
+
+            synchronized (storageAuto) {
                 while (storageBody.isEmpty() || storageEngine.isEmpty() || storageAccessory.isEmpty()) {
-                    controllerObject.wait();
+                    storageAuto.wait();
                 }
                 body = storageBody.getBody();
                 engine = storageEngine.getEngine();
@@ -57,6 +53,6 @@ public class Task implements Runnable {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
-        controllerStorage.taskCompleted();
+        storageAuto.taskCompleted();
     }
 }

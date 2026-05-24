@@ -4,6 +4,7 @@ package ru.nsu.ccfit.Dunda.factory.accessory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ru.nsu.ccfit.Dunda.factory.ControllerStorage;
+import ru.nsu.ccfit.Dunda.factory.auto.StorageAuto;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
@@ -12,9 +13,9 @@ public class StorageAccessory {
     public final int capacity;
     private final Queue<Accessory> storage = new ArrayDeque<>();
     private final Logger log = LogManager.getLogger(StorageAccessory.class);
-    private final Object controllerObject;
+    private final StorageAuto controllerObject;
 
-    public StorageAccessory(int capacity, Object controllerObject) {
+    public StorageAccessory(int capacity, StorageAuto controllerObject) {
         this.capacity = capacity;
         this.controllerObject = controllerObject;
     }

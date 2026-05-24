@@ -48,3 +48,5 @@ lab1/
 build/
 *.class
 *.log
+./lab4_java/src/main/java/ru/nsu/ccfit/Dunda/factory/ControllerStorage.java
+./lab4_java/src/main/java/ru/nsu/ccfit/Dunda/factory/StorageSizeListener.java

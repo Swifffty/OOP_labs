@@ -3,6 +3,8 @@ package ru.nsu.ccfit.Dunda.factory.engine;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ru.nsu.ccfit.Dunda.factory.ControllerStorage;
+import ru.nsu.ccfit.Dunda.factory.auto.StorageAuto;
+import ru.nsu.ccfit.Dunda.factory.body.StorageBody;
 import ru.nsu.ccfit.Dunda.factory.body.SupplierBody;
 
 import java.util.ArrayDeque;
@@ -12,9 +14,9 @@ public class StorageEngine {
     public final int capacity;
     private final Logger log = LogManager.getLogger(StorageEngine.class);
     private final Queue<Engine> storage = new ArrayDeque<>();
-    private final Object controllerObject;
+    private final StorageAuto controllerObject;
 
-    public StorageEngine(int capacity, Object controllerObject) {
+    public StorageEngine(int capacity, StorageAuto controllerObject) {
         this.capacity = capacity;
         this.controllerObject = controllerObject;
     }
